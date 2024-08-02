@@ -11,15 +11,15 @@ export const headerData = {
       links: [
         {
           text: 'NASA Student Launch',
-          href: getPermalink('/projects/nasa-sli'),
+          href: getPermalink('/subteams/nasa'),
         },
         {
           text: 'Spaceport',
-          href: getPermalink('/projects/spaceport'),
+          href: getPermalink('/subteams/sac'),
         },
         {
           text: 'Liquids',
-          href: getPermalink('/projects/liquids'),
+          href: getPermalink('/subteams/liquids'),
         },
       ],
     },

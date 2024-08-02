@@ -8,6 +8,7 @@ import Features2 from '~/components/widgets/Features2.astro';
 import Steps from '~/components/widgets/Steps.astro';
 import WeAreBsli from '~/components/widgets/WeAreBsli.astro';
 import Content from '~/components/widgets/Content.astro';
+import OurSubteams from '~/components/widgets/OurSubteams.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Stats from '~/components/widgets/Stats.astro';
@@ -29,39 +30,34 @@ const metadata = {
       {
         variant: 'primary',
         text: 'Get involved 🚀',
-        href: getPermalink("/#get-involved"),
+        href: getPermalink('/#our-subteams'),
       },
-      { text: 'Learn more', href: '#features' },
+      { text: 'Learn more', href: '#we-are-bsli' },
     ]}
     image={{ src: '~/assets/images/BSLI-Added-payload-both-teams.png', alt: 'Payload & Spaceport Teams' }}
   >
-    <Fragment slot="title">
-      Buckeye Space Launch Initiative
-    </Fragment>
+    <Fragment slot="title">THE Buckeye Space Launch Initiative </Fragment>
 
     <Fragment slot="subtitle">
       <span class="hidden sm:inline">
         at <span class="font-semibold">The Ohio State University</span>
+      </span>
     </Fragment>
   </Hero>
 
-  <!-- Note Widget ******************* -->
-<!--
-  <Note /> -->
-
-
   <WeAreBsli
+    id="we-are-bsli"
     isReversed
     tagline="WHO WE ARE"
     title="WE ARE BSLI."
     image={{
       src: '~/assets/images/scottlab2.jpg',
-      alt: 'Scott Lab at OSU'
+      alt: 'Scott Lab at OSU',
     }}
   >
     <Fragment slot="content">
-      We are <b>The Ohio State University’s</b> collegiate rocketry team, striving to expand research and technology in the aerospace industry.
-      Among our three project teams, we launch a wide array of payloads to low and high altitudes.
+      We are <b>The Ohio State University’s</b> collegiate rocketry team, striving to expand research and technology in the
+      aerospace industry. Among our three project teams, we launch a wide array of payloads to low and high altitudes.
     </Fragment>
 
     <Fragment slot="bg">
@@ -69,49 +65,39 @@ const metadata = {
     </Fragment>
   </WeAreBsli>
 
-  <!-- Features Widget *************** -->
-<!--
-  <Features
-    id="features"
-    tagline="Features"
-    title="What you get with AstroWind"
-    subtitle="One of the most professional and comprehensive templates currently on the market. Most starred & forked Astro theme in 2022."
+  <OurSubteams
+    id="our-subteams"
+    title="Our Subteams"
+    subtitle="The Buckeye Space Launch Initiative was founded with the goal of reaching space. We have become so much more by enabling students to become innovators and expand research and technology in the aerospace industry. From our competitive teams in rocketry to our liquid engine development program, we encourage students to innovate, get their hands dirty, and learn. Each subteam project has different goals and restrictions, giving students wide range of options to choose from."
     items={[
       {
-        title: 'Astro + Tailwind CSS Integration',
+        name: 'NASA Student Launch Initiative (NASA)',
         description:
-          'A seamless integration between two great frameworks that offer high productivity, performance and versatility.',
-        icon: 'tabler:brand-tailwind',
+          'NASA SLI is a research-based, competitive, experiential exploration project striving to provide relevant research through payload components to support the development of NASA’s Space Launch System (SLS) program.',
+        image: {
+          src: '~/assets/images/subteam-nasa.webp',
+          alt: 'Scott Lab at OSU',
+        },
+        href: getPermalink("/subteams/nasa")
       },
       {
-        title: 'Ready-to-use Components',
+        name: 'Spaceport America Cup (SAC)',
         description:
-          'Widgets made with Tailwind CSS ready to be used in Marketing Websites, SaaS, Blogs, Personal Profiles, Small Business...',
-        icon: 'tabler:components',
+          'SAC competes at Spaceport America Cup, an international collegiate rocketry competition hosted in New Mexico every summer. BSLI competes in the 30k Student Research and Developed (SRAD) category.',
+        image: {
+          src: '~/assets/images/subteam-sac.webp',
+          alt: 'Scott Lab at OSU',
+        },
+        href: getPermalink("/subteams/sac")
       },
       {
-        title: 'Best Practices',
-        description:
-          'Creating secure, efficient, and user-friendly websites that deliver exceptional experiences and lasting value.',
-        icon: 'tabler:list-check',
-      },
-      {
-        title: 'Excellent Page Speed',
-        description:
-          'Having a good page speed impacts organic search ranking, improves user experience (UI/UX) and increase conversion rates.',
-        icon: 'tabler:rocket',
-      },
-      {
-        title: 'Search Engine Optimization (SEO)',
-        description:
-          "SEO lies in its ability to enhance a website's visibility, driving organic traffic and enabling it to reach a wider audience.",
-        icon: 'tabler:arrows-right-left',
-      },
-      {
-        title: 'Open to new ideas and contributions',
-        description:
-          'Embracing a culture that is open to new ideas and contributions is integral fostering innovation, collaboration, and a dynamic user experience.',
-        icon: 'tabler:bulb',
+        name: 'Liquid Engine Project (Liquids)',
+        description: 'BSLI Liquids team focuses on liquid bipropellant rocket engine development. Current development includes working towards test firing an LR-101, and further refining our 1st custom engine.',
+        image: {
+          src: '~/assets/images/subteam-liquids.webp',
+          alt: 'Scott Lab at OSU',
+        },
+        href: getPermalink("/subteams/liquids")
       },
     ]}
   />
@@ -119,24 +105,22 @@ const metadata = {
   <!-- Steps Widget ****************** -->
 
   <Steps
-  id="get-involved"
-  title="Get Involved"
+    id="get-involved"
+    title="Get Involved"
     items={[
       {
         title: 'Step 1: <span class="font-medium">Find your Subteam.</span>',
-        description:
-          "Research our teams! Across NASA, Spaceport, and Liquids, there is a place for you in BSLI.",
+        description: 'Research our teams! Across NASA, Spaceport, and Liquids, there is a place for you in BSLI.',
         icon: 'tabler:search',
       },
       {
         title: 'Step 2: <span class="font-medium">Join our Slack.</span>',
-        description:
-          "You can find the link at the bottom of this page.",
+        description: 'You can find the link at the bottom of this page.',
         icon: 'tabler:message-chatbot',
       },
       {
         title: 'Step 3: <span class="font-medium">Talk to Us!</span>',
-        description: 'Talk to some people in each subteam, check out the vibe.',
+        description: 'Show up to a meeting. Talk to some people in each subteam and check out the vibe.',
         icon: 'tabler:friends',
       },
       {
@@ -148,7 +132,11 @@ const metadata = {
       src: '~/assets/images/DSC4344.webp',
       alt: 'Steps image',
     }}
-  />
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-gray-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Steps>
 
   <!-- Features2 Widget ************** -->
 
@@ -214,16 +202,6 @@ const metadata = {
     </Fragment>
   </Features2>
 
-  <!-- HighlightedPosts Widget ******* -->
-
-  <BlogLatestPosts
-    title="Find out more content in our Blog"
-    information={`The blog is used to display AstroWind documentation.
-                        Each new article will be an important step that you will need to know to be an expert in creating a website using Astro + Tailwind CSS.
-                        Astro is a very interesting technology. Thanks.
-                `}
-  />
-
   <!-- FAQs Widget ******************* -->
 
   <FAQs
@@ -283,7 +261,7 @@ const metadata = {
       {
         variant: 'primary',
         text: 'Get involved',
-        href: getPermalink("/#get-involved"),
+        href: getPermalink('/#get-involved'),
         target: '_blank',
         icon: 'tabler:download',
       },
