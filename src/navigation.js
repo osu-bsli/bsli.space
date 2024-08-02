@@ -36,7 +36,7 @@ export const headerData = {
       href: getPermalink('/contact'),
     },
   ],
-  actions: [{ variant: 'primary', text: 'JOIN', href: getPermalink('/#get-involved') }],
+  actions: [{ variant: 'primary', text: 'JOIN', href: getPermalink('#get-involved') }],
 };
 
 export const footerData = {
