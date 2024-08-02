@@ -1,9 +1,11 @@
 ---
 import { SITE } from 'astrowind:config';
+import Image from '~/components/common/Image.astro';
 ---
 
-<span
-  class="self-center ml-2 rtl:ml-0 rtl:mr-2 text-2xl md:text-xl font-bold text-gray-900 whitespace-nowrap dark:text-white"
+<div
+  class="flex flex-row items-center ml-2 md:text-xl font-bold text-gray-900 whitespace-nowrap dark:text-white"
 >
+  <Image src="~/assets/images/BSLILogoFavicon.png" alt="Logo" width="24" class="mr-2"/>
   {SITE?.name}
 </span>
