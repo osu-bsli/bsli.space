@@ -8,7 +8,7 @@ import Features2 from '~/components/widgets/Features2.astro';
 import Steps from '~/components/widgets/Steps.astro';
 import WeAreBsli from '~/components/widgets/WeAreBsli.astro';
 import Content from '~/components/widgets/Content.astro';
-import OurSubteams from '~/components/widgets/OurSubteams.astro';
+import OurProjects from '~/components/widgets/OurProjects.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Stats from '~/components/widgets/Stats.astro';
@@ -65,9 +65,9 @@ const metadata = {
     </Fragment>
   </WeAreBsli>
 
-  <OurSubteams
-    id="our-subteams"
-    title="Our Subteams"
+  <OurProjects
+    id="our-projects"
+    title="Our Projects"
     subtitle="The Buckeye Space Launch Initiative was founded with the goal of reaching space. We have become so much more by enabling students to become innovators and expand research and technology in the aerospace industry. From our competitive teams in rocketry to our liquid engine development program, we encourage students to innovate, get their hands dirty, and learn. Each subteam project has different goals and restrictions, giving students wide range of options to choose from."
     items={[
       {
@@ -78,7 +78,7 @@ const metadata = {
           src: '~/assets/images/subteam-nasa.webp',
           alt: 'Scott Lab at OSU',
         },
-        href: getPermalink("/subteams/nasa")
+        href: getPermalink("/projects/nasa")
       },
       {
         name: 'Spaceport America Cup (SAC)',
@@ -88,7 +88,7 @@ const metadata = {
           src: '~/assets/images/subteam-sac.webp',
           alt: 'Scott Lab at OSU',
         },
-        href: getPermalink("/subteams/sac")
+        href: getPermalink("/projects/sac")
       },
       {
         name: 'Liquid Engine Project (Liquids)',
@@ -97,7 +97,7 @@ const metadata = {
           src: '~/assets/images/subteam-liquids.webp',
           alt: 'Scott Lab at OSU',
         },
-        href: getPermalink("/subteams/liquids")
+        href: getPermalink("/projects/liquids")
       },
     ]}
   />
@@ -109,7 +109,7 @@ const metadata = {
     title="Get Involved"
     items={[
       {
-        title: 'Step 1: <span class="font-medium">Find your Subteam.</span>',
+        title: 'Step 1: <span class="font-medium">Find your Project Subteam.</span>',
         description: 'Research our teams! Across NASA, Spaceport, and Liquids, there is a place for you in BSLI.',
         icon: 'tabler:search',
       },
