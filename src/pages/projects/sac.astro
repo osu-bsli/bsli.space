@@ -1,0 +1,91 @@
+---
+import Layout from "~/layouts/PageLayout.astro";
+
+import SubteamHero from "~/components/widgets/SubteamHero.astro";
+import SubteamBlurb from "~/components/widgets/SubteamBlurb.astro";
+import Note from "~/components/widgets/Note.astro";
+import Features from "~/components/widgets/Features.astro";
+import Features2 from "~/components/widgets/Features2.astro";
+import Steps from "~/components/widgets/Steps.astro";
+import WeAreBsli from "~/components/widgets/WeAreBsli.astro";
+import Content from "~/components/widgets/Content.astro";
+import OurProjects from "~/components/widgets/OurProjects.astro";
+import BlogLatestPosts from "~/components/widgets/BlogLatestPosts.astro";
+import FAQs from "~/components/widgets/FAQs.astro";
+import Stats from "~/components/widgets/Stats.astro";
+import CallToAction from "~/components/widgets/CallToAction.astro";
+
+import { getPermalink } from "~/utils/permalinks";
+
+const metadata = {
+    title: "BSLI — The Ohio State University",
+    ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <SubteamHero
+      image={{
+          src: "~/assets/images/projects/sac/hero.jpeg",
+          alt: "Spaceport America Cup Team",
+      }}
+      tagline={"23′-24′ Spaceport America Cup Team"}
+  >
+      <Fragment slot="title">Spaceport America Cup Project</Fragment>
+
+      <Fragment slot="subtitle">
+    NASA SLI is part of NASA’s Artemis Student Challenges. NASA SLI is a competitive, research-based project that provides research and development support to the SLS program.
+      </Fragment>
+  </SubteamHero>
+
+  <Features2
+    columns={3}
+    items={[
+      {
+        title: 'Spaceport America Cup',
+        description:
+          'The Spaceport America Cup is the largest Intercollegiate Rocket Engineering Competition. Students can launch solid, liquid, or hybrid rockets up to 10k or 30k feet.',
+        image: {
+          "src": "~/assets/images/projects/sac/sac-logo.webp",
+          "alt": "Spaceport America Cup Logo"
+        }
+      },
+      {
+        title: 'Spaceport America | The Space to be…™',
+        description:
+          'Spaceport America Cup is held at Spaceport America, the world’s first purpose-built commercial spaceport in Las Cruces, NM.',
+        image: {
+          "src": "~/assets/images/projects/sac/spaceport-america.webp",
+          "alt": "Spaceport America"
+        }
+      },
+      {
+        title: 'Experimental Sounding Rocket Association',
+        description:
+          'ESRA is a non-profit organization founded to foster and promote engineering knowledge in rocketry.',
+        image: {
+          "src": "~/assets/images/projects/sac/esra-logo.webp",
+          "alt": "Experimental Sounding Rocket Association Logo"
+        }
+      },
+    ]}
+  />
+
+  <SubteamBlurb
+    title="BSLI SAC Project team competes annually at Spaceport America"
+    image={{
+      src: '~/assets/images/projects/sac/team-at-spaceport-america.webp',
+      alt: 'Spaceport America Cup Project Team',
+    }}
+  >
+    <Fragment slot="content">
+      BSLI Spaceport America Cup (SAC) project team is focused on designing, manufacturing, and launching a student-built rocket. Every year, the team travels to New Mexico to compete in the Spaceport America Cup, the largest intercollegiate rocketry competition. The team competes in the 30k, Student Research and Designed (SRAD) category, meaning they design all components of a rocket to reach or get as close to 30,000 feet as possible.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-gray-50 dark:bg-transparent"></div>
+    </Fragment>
+  </SubteamBlurb>
+
+  </Features>
+</Layout>

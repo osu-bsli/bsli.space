@@ -1,0 +1,64 @@
+---
+import Layout from "~/layouts/PageLayout.astro";
+
+import SubteamHero from "~/components/widgets/SubteamHero.astro";
+import SubteamBlurb from "~/components/widgets/SubteamBlurb.astro";
+import Note from "~/components/widgets/Note.astro";
+import Features from "~/components/widgets/Features.astro";
+import Features2 from "~/components/widgets/Features2.astro";
+import Steps from "~/components/widgets/Steps.astro";
+import WeAreBsli from "~/components/widgets/WeAreBsli.astro";
+import Content from "~/components/widgets/Content.astro";
+import OurProjects from "~/components/widgets/OurProjects.astro";
+import BlogLatestPosts from "~/components/widgets/BlogLatestPosts.astro";
+import FAQs from "~/components/widgets/FAQs.astro";
+import Stats from "~/components/widgets/Stats.astro";
+import CallToAction from "~/components/widgets/CallToAction.astro";
+
+import { getPermalink } from "~/utils/permalinks";
+
+const metadata = {
+    title: "BSLI — The Ohio State University",
+    ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <SubteamHero
+      image={{
+          src: "~/assets/images/projects/liquids/hero.jpg",
+          alt: "23′-24′ Liquids Team",
+      }}
+      tagline={"23′-24′ Liquids Team"}
+  >
+      <Fragment slot="title">Liquids Project</Fragment>
+
+      <Fragment slot="subtitle">
+    NASA SLI is part of NASA’s Artemis Student Challenges. NASA SLI is a competitive, research-based project that provides research and development support to the SLS program.
+      </Fragment>
+  </SubteamHero>
+
+  <SubteamBlurb
+    title="The Liquid Engine Project strives to develop liquid rocketry at Ohio State"
+    image={{
+      src: '~/assets/images/projects/liquids/in-the-field.webp',
+      alt: 'Liquids Rocket Engine in the Field',
+    }}
+  >
+    <Fragment slot="content">
+      <p class="mb-8">
+      Since the beginning, we’ve dreamed of reaching the Karmen line, but it takes a lot of work to get there. Our work in both the NASA Student Launch and Spaceport America Cup projects has helped to prepare the foundation; now it’s time to reach new heights. The liquids project works to develop student-designed engines while providing fostering students’ skills with hands-on experiences.
+      </p>
+
+      <p>
+      The liquids project has successfully test-fired a commercial LR-101 rocket engine, and work is now focused on developing their additively-manufactured Serenity engine.
+      </p>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-gray-50 dark:bg-transparent"></div>
+    </Fragment>
+  </SubteamBlurb>
+
+  </Features>
+</Layout>
