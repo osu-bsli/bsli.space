@@ -48,11 +48,11 @@ const {
             <h3 class="text-xl font-bold">{name}</h3>
             <p class="mt-4">{description}</p>
 
-            <h3 class="text-large font-bold my-4 underline">Meeting Times</h3>
+            <h3 class="text-large font-bold my-4">Meeting Times</h3>
 
             {
               meetingTimes.map(({day, time}) => (
-                <p><u>{day}:</u> {time}</p>
+                <p>{day}: {time}</p>
               ))
             }
 
