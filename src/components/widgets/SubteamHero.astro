@@ -32,7 +32,7 @@ const {
         {
           tagline && (
             <p
-              class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase"
+              class="text-base text-secondary font-bold tracking-wide uppercase"
               set:html={tagline}
             />
           )
@@ -40,13 +40,13 @@ const {
         {
           title && (
             <h1
-              class="text-5xl md:text-6xl font-bold leading-tighter tracking-tighter mb-4 font-heading dark:text-gray-200"
+              class="text-5xl md:text-6xl font-bold leading-tighter tracking-tighter mb-4 font-heading dark:--aw-color-text-heading"
               set:html={title}
             />
           )
         }
         <div class="max-w-3xl mx-auto lg:max-w-none">
-          {subtitle && <p class="text-xl mb-6 dark:text-slate-300" set:html={subtitle} />}
+          {subtitle && <p class="text-xl mb-6 dark:--aw-color-text-muted" set:html={subtitle} />}
 
           {
             actions && (

@@ -1,4 +1,4 @@
-import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
+import { getPermalink, getBlogPermalink, getAsset, getHomePermalink } from './utils/permalinks';
 
 export const headerData = {
   links: [
@@ -36,7 +36,7 @@ export const headerData = {
       href: getPermalink('/contact'),
     },
   ],
-  actions: [{ variant: 'primary', text: 'JOIN', href: getPermalink('#get-involved') }],
+  actions: [{ variant: 'primary', text: 'JOIN', href: getHomePermalink() + '#get-involved' }],
 };
 
 export const footerData = {

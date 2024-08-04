@@ -14,7 +14,7 @@ import FAQs from '~/components/widgets/FAQs.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
-import { getPermalink } from '~/utils/permalinks';
+import { getHomePermalink, getPermalink } from '~/utils/permalinks';
 
 const metadata = {
   title: 'BSLI — The Ohio State University',
@@ -30,7 +30,7 @@ const metadata = {
       {
         variant: 'primary',
         text: 'Get involved 🚀',
-        href: getPermalink('#get-involved'),
+        href: getHomePermalink() + '#get-involved',
       },
       { text: 'Learn more', href: '#we-are-bsli' },
     ]}
@@ -114,12 +114,17 @@ const metadata = {
         icon: 'tabler:search',
       },
       {
-        title: 'Step 2: <span class="font-medium">Join our Slack.</span>',
+        title: 'Step 2: <span class="font-medium">Check if the team meets when you\'re available.</span>',
+        description: `Meeting times can be found in the "Our Projects" section above.`,
+        icon: 'tabler:clock',
+      },
+      {
+        title: 'Step 3: <span class="font-medium">Join our Slack.</span>',
         description: 'You can find the link at the bottom of this page.',
         icon: 'tabler:message-chatbot',
       },
       {
-        title: 'Step 3: <span class="font-medium">Talk to Us!</span>',
+        title: 'Step 4: <span class="font-medium">Talk to Us!</span>',
         description: 'Show up to a meeting. Talk to some people in each subteam and check out the vibe.',
         icon: 'tabler:friends',
       },
