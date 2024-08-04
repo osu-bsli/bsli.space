@@ -34,7 +34,7 @@ const {
 
     <div class="flex flex-col lg:justify-between lg:flex-row mb-8">
       {
-        items.map(({ image, name, description, href }) => (
+        items.map(({ image, name, description, href, meetingTimes}) => (
           <div class="flex flex-col my-4 lg:mx-8">
             <Image
               class="mx-auto w-full rounded-lg bg-gray-500 shadow-lg mb-4 mt-8"
@@ -47,6 +47,14 @@ const {
             />
             <h3 class="text-xl font-bold">{name}</h3>
             <p class="mt-4">{description}</p>
+
+            <h3 class="text-large font-bold my-4 underline">Meeting Times</h3>
+
+            {
+              meetingTimes.map(({day, time}) => (
+                <p><u>{day}:</u> {time}</p>
+              ))
+            }
 
             <Button variant="primary" href={href} class="mt-8">
               Learn More

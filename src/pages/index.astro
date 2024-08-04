@@ -78,7 +78,17 @@ const metadata = {
           src: '~/assets/images/subteam-nasa.webp',
           alt: 'Scott Lab at OSU',
         },
-        href: getPermalink("/projects/nasa")
+        href: getPermalink("/projects/nasa"),
+        meetingTimes: [
+          {
+            "day": "Tuesdays",
+            "time": "6-8 pm"
+          },
+          {
+            "day": "Sundays",
+            "time": "3-5 pm"
+          }
+        ]
       },
       {
         name: 'Spaceport America Cup (SAC)',
@@ -88,7 +98,17 @@ const metadata = {
           src: '~/assets/images/subteam-sac.webp',
           alt: 'Scott Lab at OSU',
         },
-        href: getPermalink("/projects/sac")
+        href: getPermalink("/projects/sac"),
+        meetingTimes: [
+          {
+            "day": "Wednesdays",
+            "time": "7-9 pm"
+          },
+          {
+            "day": "Sundays",
+            "time": "1-3 pm"
+          }
+        ]
       },
       {
         name: 'Liquid Engine Project (Liquids)',
@@ -97,10 +117,21 @@ const metadata = {
           src: '~/assets/images/subteam-liquids.webp',
           alt: 'Scott Lab at OSU',
         },
-        href: getPermalink("/projects/liquids")
+        href: getPermalink("/projects/liquids"),
+        meetingTimes: [
+          {
+            "day": "Thursdays",
+            "time": "6 pm"
+          },
+          {
+            "day": "Sundays",
+            "time": "4 pm"
+          }
+        ]
       },
     ]}
-  />
+  >
+  </OurProjects>
 
   <!-- Steps Widget ****************** -->
 
@@ -109,13 +140,13 @@ const metadata = {
     title="Get Involved"
     items={[
       {
-        title: 'Step 1: <span class="font-medium">Find your Project Subteam.</span>',
+        title: 'Step 1: <u><a href="#our-projects"><span class="font-medium">Find your Project Subteam.</span></a></u>',
         description: 'Research our teams! Across NASA, Spaceport, and Liquids, there is a place for you in BSLI.',
         icon: 'tabler:search',
       },
       {
         title: 'Step 2: <span class="font-medium">Check if the team meets when you\'re available.</span>',
-        description: `Meeting times can be found in the "Our Projects" section above.`,
+        description: `Meeting times can be found in the <u><a href="#our-projects">"Our Projects"</a></u> section above.`,
         icon: 'tabler:clock',
       },
       {
