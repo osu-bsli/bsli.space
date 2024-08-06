@@ -1,8 +1,8 @@
 ---
 import Layout from "~/layouts/PageLayout.astro";
 
-import SubteamHero from "~/components/widgets/SubteamHero.astro";
-import SubteamBlurb from "~/components/widgets/SubteamBlurb.astro";
+import ProjectHero from "~/components/widgets/ProjectHero.astro";
+import ProjectBlurb from "~/components/widgets/ProjectBlurb.astro";
 
 const metadata = {
     title: "BSLI — The Ohio State University",
@@ -11,7 +11,7 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
-  <SubteamHero
+  <ProjectHero
       image={{
           src: "~/assets/images/projects/liquids/hero.jpg",
           alt: "23′-24′ Liquids Team",
@@ -23,9 +23,9 @@ const metadata = {
       <Fragment slot="subtitle">
         Our liquids project works to develop student-designed engines while fostering students’ skills with hands-on experiences.
       </Fragment>
-  </SubteamHero>
+  </ProjectHero>
 
-  <SubteamBlurb
+  <ProjectBlurb
     title="The Liquid Engine Project strives to develop liquid rocketry at Ohio State"
     image={{
       src: '~/assets/images/projects/liquids/in-the-field.webp',
@@ -45,7 +45,7 @@ const metadata = {
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-gray-50 dark:bg-transparent"></div>
     </Fragment>
-  </SubteamBlurb>
+  </ProjectBlurb>
 
   </Features>
 </Layout>

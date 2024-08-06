@@ -1,8 +1,8 @@
 ---
 import Layout from "~/layouts/PageLayout.astro";
 
-import SubteamHero from "~/components/widgets/SubteamHero.astro";
-import SubteamBlurb from "~/components/widgets/SubteamBlurb.astro";
+import ProjectHero from "~/components/widgets/ProjectHero.astro";
+import ProjectBlurb from "~/components/widgets/ProjectBlurb.astro";
 import Features2 from "~/components/widgets/Features2.astro";
 
 const metadata = {
@@ -12,7 +12,7 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
-  <SubteamHero
+  <ProjectHero
       image={{
           src: "~/assets/images/projects/sac/hero.jpeg",
           alt: "Spaceport America Cup Team",
@@ -24,7 +24,7 @@ const metadata = {
       <Fragment slot="subtitle">
         We participate in the <b>Spaceport America Cup</b>, the world’s largest Intercollegiate Rocket Engineering Competition, where students can launch solid, liquid, or hybrid rockets to 10k or 30k feet.
       </Fragment>
-  </SubteamHero>
+  </ProjectHero>
 
   <Features2
     columns={3}
@@ -59,7 +59,7 @@ const metadata = {
     ]}
   />
 
-  <SubteamBlurb
+  <ProjectBlurb
     title="BSLI SAC Project team competes annually at Spaceport America"
     image={{
       src: '~/assets/images/projects/sac/team-at-spaceport-america.webp',
@@ -73,7 +73,7 @@ const metadata = {
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-gray-50 dark:bg-transparent"></div>
     </Fragment>
-  </SubteamBlurb>
+  </ProjectBlurb>
 
   </Features>
 </Layout>
