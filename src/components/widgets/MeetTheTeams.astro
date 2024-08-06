@@ -1,0 +1,92 @@
+---
+import WidgetWrapper from "../ui/WidgetWrapper.astro";
+
+const {
+  title = await Astro.slots.render("title"),
+  tabs = [],
+  initialTab,
+
+  id,
+  bg = await Astro.slots.render("bg"),
+} = Astro.props;
+---
+
+<WidgetWrapper>
+  <div class="md:basis-1/2 self-center">
+    <h2 class="text-center font-bold text-2xl mb-8 my-8 lg:mt-0">{title}</h2>
+
+    <div class="mb-4 border-b border-gray-200 dark:border-gray-700">
+      <ul
+        class="flex justify-center flex-wrap -mb-px text-medium font-medium text-center"
+      >
+        {
+          tabs.map((name) => (
+            <li class="me-2 cursor-pointer" role="presentation">
+              <a
+                data-tab={name}
+                class="inline-block p-4 border-b-4 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 border-transparent"
+                type="button"
+                href={"#tab-content-" + name}
+              >
+                {name}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+
+    <div>
+      {
+        tabs.map(async (name) => (
+          <div
+            id={"tab-content-" + name}
+            data-tab-content={name}
+            set:html={await Astro.slots.render(name)}
+          />
+        ))
+      }
+    </div>
+  </div>
+</WidgetWrapper>
+
+<script is:inline data-astro-rerun>
+  // Find our component DOM on the page.
+  var tabs = document.querySelectorAll("[data-tab]");
+  var contentDivs = document.querySelectorAll("[data-tab-content]");
+
+  var activeClasses = ["text-primary", "border-primary"];
+  var inactiveClasses = [
+    "hover:text-gray-600",
+    "hover:border-gray-300",
+    "dark:hover:text-gray-300",
+    "border-transparent",
+  ];
+
+  function setActiveTab(e) {
+    tabs.forEach((tab) => {
+      tab.removeAttribute("href");
+      tab.classList.remove(...activeClasses);
+      tab.classList.add(...inactiveClasses);
+    });
+
+    e.classList.remove(...inactiveClasses);
+    e.classList.add(...activeClasses);
+
+    contentDivs.forEach((contentDiv) => {
+      contentDiv.classList.add("hidden");
+    });
+
+    document
+      .querySelector(`[data-tab-content='${e.getAttribute("data-tab")}']`)
+      ?.classList.remove("hidden");
+  }
+
+  tabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+      setActiveTab(tab);
+    });
+  });
+
+  setActiveTab(tabs[0]);
+</script>

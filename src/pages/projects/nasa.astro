@@ -1,28 +1,34 @@
 ---
 import Layout from "~/layouts/PageLayout.astro";
 
+import MeetTheTeams from "~/components/widgets/MeetTheTeams.astro";
+import TeamOverview from "~/components/widgets/TeamOverview.astro";
+import TeamOverviewLeader from "~/components/widgets/TeamOverviewLeader.astro";
 import SubteamHero from "~/components/widgets/SubteamHero.astro";
+import SubteamInfo from "~/components/widgets/SubteamInfo.astro";
 import SubteamBlurb from "~/components/widgets/SubteamBlurb.astro";
 import Features2 from "~/components/widgets/Features2.astro";
 
 const metadata = {
-    title: "BSLI — The Ohio State University",
-    ignoreTitleTemplate: true,
+  title: "BSLI — The Ohio State University",
+  ignoreTitleTemplate: true,
 };
 ---
 
 <Layout metadata={metadata}>
   <SubteamHero
-      image={{
-          src: "~/assets/images/projects/nasa/hero.jpg",
-          alt: "NASA Student Launch",
-      }}
-      tagline={"23′-24′ NASA Student Launch Initiative Team"}
+    image={{
+      src: "~/assets/images/projects/nasa/hero.jpg",
+      alt: "NASA Student Launch",
+    }}
+    tagline={"23′-24′ NASA Student Launch Initiative Team"}
   >
     <Fragment slot="title">NASA Student Launch Project</Fragment>
 
     <Fragment slot="subtitle">
-      We are part of <b>NASA’s Artemis Student Challenges</b>. NASA SLI is a competitive, research-based project that provides research and development support to the Space Launch System program.
+      We are part of <b>NASA’s Artemis Student Challenges</b>. NASA SLI is a
+      competitive, research-based project that provides research and development
+      support to the Space Launch System program.
     </Fragment>
   </SubteamHero>
 
@@ -30,22 +36,22 @@ const metadata = {
     columns={2}
     items={[
       {
-        title: 'NASA Artemis Challenge',
+        title: "NASA Artemis Challenge",
         description:
-          'We are part of NASA’s Artemis Student Challenges. NASA SLI is a competitive, research-based project that provides research and development support to the SLS program.',
+          "We are part of NASA’s Artemis Student Challenges. NASA SLI is a competitive, research-based project that provides research and development support to the SLS program.",
         image: {
-          "src": "~/assets/images/projects/nasa/Artemis_Logo_NASA.webp",
-          "alt": "NASA Artemis Logo"
-        }
+          src: "~/assets/images/projects/nasa/Artemis_Logo_NASA.webp",
+          alt: "NASA Artemis Logo",
+        },
       },
       {
-        title: 'NASA Marshall Center | Huntsville, AL',
+        title: "NASA Marshall Center | Huntsville, AL",
         description:
-          'NASA Student Launch is annually held at NASA’s Marshall Center in Huntsville, AL.',
+          "NASA Student Launch is annually held at NASA’s Marshall Center in Huntsville, AL.",
         image: {
-          "src": "~/assets/images/projects/nasa/davidson_center_stock_photo.webp",
-          "alt": "NASA Davidson Center"
-        }
+          src: "~/assets/images/projects/nasa/davidson_center_stock_photo.webp",
+          alt: "NASA Davidson Center",
+        },
       },
     ]}
   />
@@ -55,12 +61,17 @@ const metadata = {
     isReversed
     title="BSLI NASA SL Project team strives to compete in Huntsville."
     image={{
-      src: '~/assets/images/projects/nasa/IMG20230414140044-scaled.webp',
-      alt: 'NASA Subteam',
+      src: "~/assets/images/projects/nasa/IMG20230414140044-scaled.webp",
+      alt: "NASA Subteam",
     }}
   >
     <Fragment slot="content">
-      BSLI NASA Student Launch Initiative (SLI) project team commits to an eight-month process of designing, building, and flying payloads or vehicle components to support NASA’s Space Launch System (SLS) program. Each year, a new payload challenge is released by NASA, and the team works to design a vehicle and payload system to meet those needs in addition to writing competitive proposals and participating in design reviews.
+      Every year, the NASA Student Launch Initiative (SLI) project team commits
+      to an eight-month process of designing, building, and flying payloads or
+      vehicle components to support NASA’s Space Launch System (SLS) program.
+      Each year, a new payload challenge is released by NASA, and the team works
+      to design a vehicle and payload system to meet those needs in addition to
+      writing competitive proposals and participating in design reviews.
     </Fragment>
 
     <Fragment slot="bg">
@@ -68,5 +79,116 @@ const metadata = {
     </Fragment>
   </SubteamBlurb>
 
-  </Features>
+  <MeetTheTeams
+    title="Meet the Teams"
+    tabs={[
+      "Overview",
+      "Structures",
+      "Avionics",
+      "Payload",
+      "Safety & Recovery",
+    ]}
+  >
+    <TeamOverview
+      slot="Overview"
+      title="COSMOS"
+      image={{
+        src: "~/assets/images/projects/nasa/overview.webp",
+        alt: "NASA Davidson Center",
+      }}
+      stats={[
+        { name: "HEIGHT", values: ["2.74 m", "9 ft"] },
+        { name: "DIAMETER", values: ["0.15 m", "0.51 ft"] },
+        { name: "THRUST", values: ["1334 N", "300 lbf"] },
+        { name: "MOTOR", values: ["Aerotech L1150"] },
+        { name: "APOGEE", values: ["1.48 km", "4.9k ft"] },
+        { name: "TOP SPEED", values: ["Mach 0.57"] },
+      ]}
+    >
+      <TeamOverviewLeader
+        title="Project Manager"
+        people={[
+          {
+            name: "Madi Herrmann",
+            linkedins: ["http://linkedin.com/in/mh24"],
+            emails: ["herrmann.164@osu.edu"],
+          },
+        ]}
+      />
+      <TeamOverviewLeader
+        title="Deputy PM"
+        people={[
+          {
+            name: "Alex Chou",
+            linkedins: ["http://linkedin.com/in/alex-chou-b26b4514a"],
+            emails: ["chou.315@osu.edu"],
+          },
+          {
+            name: "Abby Atchley",
+            emails: ["atchley.23@osu.edu"]
+          },
+        ]}
+      />
+    </TeamOverview>
+
+    <SubteamInfo
+      slot="Structures"
+      title="Structures"
+      image={{
+        src: "~/assets/images/projects/nasa/structures.webp",
+        alt: "Rocket mounted on a launch stand"
+      }}
+      lead={{
+        name: "Ryan Saleme",
+        linkedins: ["https://www.linkedin.com/in/ryansaleme"],
+        emails: ["saleme.2@osu.edu"]
+      }}
+      description="The NASA SL structures team is responsible for designing and testing all structural components for the rocket. The team focuses on creating a structurally-reliable airframe and any other aerodynamic components. Work includes layups, sanding, laser cutting, coating, and component testing. Team members will gain hands-on engineering experience, design and modeling work, and how to use structural materials."
+    />
+
+    <SubteamInfo
+      slot="Avionics"
+      title="Avionics"
+      image={{
+        src: "~/assets/images/projects/nasa/avionics.webp",
+        alt: "NASA SL avionics bay"
+      }}
+      lead={{
+        name: "Niraj Patel",
+        linkedins: ["https://www.linkedin.com/in/nirajpatel09"],
+        emails: ["patel.4092@osu.edu"]
+      }}
+      description="The NASA SL avionics team is responsible for designing, testing, and manufacturing all flight computers, sensors, and telemetry systems and ensuring that rocket recovery systems are functional. Avionics works closely with all teams to collect proper data for a successful flight. Additionally, they work closely with Recovery and Payload to assist and ensure the proper systems and data collection systems work for their needs."
+    />
+
+    <SubteamInfo
+      slot="Payload"
+      title="Payload"
+      image={{
+        src: "~/assets/images/projects/nasa/payload.webp",
+        alt: "NASA SL payload"
+      }}
+      lead={{
+        title: "Team Leads: ",
+        name: "Pietro Lavezzo & Brady Wilson",
+        emails: ["lavezzo.2@osu.edu", "wilson.3572@osu.edu"],
+      }}
+      description="The NASA SL payload team focuses on designing a payload that conforms to the competition requirements. The Payload team works to implement a solution to a given challenge. The payload follows a CubeSat form factor. Work includes design brainstorming, CAD development, software programming, and data analysis post-flight."
+    />
+
+    <SubteamInfo
+      slot="Safety & Recovery"
+      title="Safety & Recovery"
+      image={{
+        src: "~/assets/images/projects/nasa/safety & recovery.webp",
+        alt: "NASA SL rocket with deployed parachutes"
+      }}
+      lead={{
+        name: "Morgan McGraw",
+        linkedins: ["https://www.linkedin.com/in/morgan-mcgraw-67a22926b"],
+        emails: ["mcgraw.168@osu.edu"],
+      }}
+      description="NASA SL Safety & Recovery focuses on designing and overseeing the vehicle’s recovery systems. This work is vital to ensure a proper and safe descent of the launch vehicle during flight. Work also includes collaborating with the other subteams to ensure proper functionality of recovery systems."
+  />
+  </MeetTheTeams>
 </Layout>

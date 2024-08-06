@@ -1,0 +1,36 @@
+---
+import Image from "~/components/common/Image.astro";
+
+const { title, slot, stats = [], image } = Astro.props;
+---
+
+<div class="flex flex-col md:flex-row justify-center">
+  <div class="flex flex-col md:w-1/2">
+    <h2
+      id={"tab-content-" + title}
+      class="text-primary font-bold text-6xl my-8"
+    >
+      {title}
+    </h2>
+
+    <table>
+      {
+        stats.map(({ name, values }) => (
+          <tr>
+            <td class="text-xl py-2 font-bold">{name}</td>
+
+            <td class="text-xl py-2 font-bold text-right">
+              {values.shift()}
+
+              <span class="text-muted">{values.map((v) => "/ " + v)}</span>
+            </td>
+          </tr>
+        ))
+      }
+
+      <slot />
+    </table>
+  </div>
+
+  <Image {...image} class="max-h-screen" />
+</div>

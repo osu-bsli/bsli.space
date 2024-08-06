@@ -1,0 +1,19 @@
+---
+import Socials from "./Socials.astro";
+
+const { title, people = [] } = Astro.props;
+---
+
+<tr>
+  <td class="text-xl py-2 font-bold">{title}</td>
+  <td class="flex flex-col text-xl py-2 font-bold text-right text-primary">
+    {
+      people.map(({name, linkedins, emails }) => (
+        <div class="flex flex-col items-end">
+          {name}
+          <Socials linkedins={linkedins} emails={emails}/>
+        </div>
+      ))
+    }
+  </td>
+</tr>
