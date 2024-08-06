@@ -1,8 +1,17 @@
 ---
-import Image from "~/components/common/Image.astro";
 import Socials from "./Socials.astro";
+import Image from "../common/Image.astro";
+import { type TeamMember } from "~/types";
+import { type ImageProps } from "~/utils/images-optimization";
 
-const { title, lead, description, image } = Astro.props;
+export interface Props {
+  title: string,
+  lead: TeamMember,
+  description: string,
+  images: Array<ImageProps>,
+}
+
+const { title, lead, description, images = [] } = Astro.props;
 ---
 
 <div class="flex flex-col md:flex-row justify-center gap-8">
@@ -12,14 +21,17 @@ const { title, lead, description, image } = Astro.props;
     <div class="items-end my-4">
       <h3 class="text-xl font-bold">
         {lead.title ? lead.title : "Team Lead: "}<span class="text-primary"
-          >{lead.name}</span>
+          >{lead.name}</span
+        >
       </h3>
 
       <Socials linkedins={lead.linkedins} emails={lead.emails} />
     </div>
 
-    <p class="text-lg">{description}</p>
+    <p class="text-lg" set:html={description}></p>
   </div>
 
-  <Image class="md:w-1/2" layout="contained" {...image} />
+  <div class="flex flex-col gap-4 md:w-1/2">
+    {images.map((i) => <Image layout="contained" {...i} />)}
+  </div>
 </div>

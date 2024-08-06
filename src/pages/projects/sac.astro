@@ -4,57 +4,63 @@ import Layout from "~/layouts/PageLayout.astro";
 import ProjectHero from "~/components/widgets/ProjectHero.astro";
 import ProjectBlurb from "~/components/widgets/ProjectBlurb.astro";
 import Features2 from "~/components/widgets/Features2.astro";
+import MeetTheTeams from "~/components/widgets/MeetTheTeams.astro";
+import TeamOverview from "~/components/widgets/TeamOverview.astro";
+import TeamOverviewLeader from "~/components/widgets/TeamOverviewLeader.astro";
+import SubteamInfo from "~/components/widgets/SubteamInfo.astro";
 
 const metadata = {
-    title: "BSLI — The Ohio State University",
-    ignoreTitleTemplate: true,
+  title: "BSLI — The Ohio State University",
+  ignoreTitleTemplate: true,
 };
 ---
 
 <Layout metadata={metadata}>
   <ProjectHero
-      image={{
-          src: "~/assets/images/projects/sac/hero.jpeg",
-          alt: "Spaceport America Cup Team",
-      }}
-      tagline={"23′-24′ Spaceport America Cup Team"}
+    image={{
+      src: "~/assets/images/projects/sac/hero.jpeg",
+      alt: "Spaceport America Cup Team",
+    }}
+    tagline={"23′-24′ Spaceport America Cup Team"}
   >
-      <Fragment slot="title">Spaceport America Cup Project</Fragment>
+    <Fragment slot="title">Spaceport America Cup Project</Fragment>
 
-      <Fragment slot="subtitle">
-        We participate in the <b>Spaceport America Cup</b>, the world’s largest Intercollegiate Rocket Engineering Competition, where students can launch solid, liquid, or hybrid rockets to 10k or 30k feet.
-      </Fragment>
+    <Fragment slot="subtitle">
+      We participate in the <b>Spaceport America Cup</b>, the world’s largest
+      Intercollegiate Rocket Engineering Competition, where students can launch
+      solid, liquid, or hybrid rockets to 10k or 30k feet.
+    </Fragment>
   </ProjectHero>
 
   <Features2
     columns={3}
     items={[
       {
-        title: 'Spaceport America Cup',
+        title: "Spaceport America Cup",
         description:
-          'The Spaceport America Cup is the largest Intercollegiate Rocket Engineering Competition. Students can launch solid, liquid, or hybrid rockets up to 10k or 30k feet.',
+          "The Spaceport America Cup is the largest Intercollegiate Rocket Engineering Competition. Students can launch solid, liquid, or hybrid rockets up to 10k or 30k feet.",
         image: {
-          "src": "~/assets/images/projects/sac/sac-logo.webp",
-          "alt": "Spaceport America Cup Logo"
-        }
+          src: "~/assets/images/projects/sac/sac-logo.webp",
+          alt: "Spaceport America Cup Logo",
+        },
       },
       {
-        title: 'Spaceport America | The Space to be…™',
+        title: "Spaceport America | The Space to be…™",
         description:
-          'Spaceport America Cup is held at Spaceport America, the world’s first purpose-built commercial spaceport in Las Cruces, NM.',
+          "Spaceport America Cup is held at Spaceport America, the world’s first purpose-built commercial spaceport in Las Cruces, NM.",
         image: {
-          "src": "~/assets/images/projects/sac/spaceport-america.webp",
-          "alt": "Spaceport America"
-        }
+          src: "~/assets/images/projects/sac/spaceport-america.webp",
+          alt: "Spaceport America",
+        },
       },
       {
-        title: 'Experimental Sounding Rocket Association',
+        title: "Experimental Sounding Rocket Association",
         description:
-          'ESRA is a non-profit organization founded to foster and promote engineering knowledge in rocketry.',
+          "ESRA is a non-profit organization founded to foster and promote engineering knowledge in rocketry.",
         image: {
-          "src": "~/assets/images/projects/sac/esra-logo.webp",
-          "alt": "Experimental Sounding Rocket Association Logo"
-        }
+          src: "~/assets/images/projects/sac/esra-logo.webp",
+          alt: "Experimental Sounding Rocket Association Logo",
+        },
       },
     ]}
   />
@@ -62,12 +68,18 @@ const metadata = {
   <ProjectBlurb
     title="BSLI SAC Project team competes annually at Spaceport America"
     image={{
-      src: '~/assets/images/projects/sac/team-at-spaceport-america.webp',
-      alt: 'Spaceport America Cup Project Team',
+      src: "~/assets/images/projects/sac/team-at-spaceport-america.webp",
+      alt: "Spaceport America Cup Project Team",
     }}
   >
     <Fragment slot="content">
-      BSLI Spaceport America Cup (SAC) project team is focused on designing, manufacturing, and launching a student-built rocket. Every year, the team travels to New Mexico to compete in the Spaceport America Cup, the largest intercollegiate rocketry competition. The team competes in the 30k, Student Research and Designed (SRAD) category, meaning they design all components of a rocket to reach or get as close to 30,000 feet as possible.
+      BSLI Spaceport America Cup (SAC) project team is focused on designing,
+      manufacturing, and launching a student-built rocket. Every year, the team
+      travels to New Mexico to compete in the Spaceport America Cup, the largest
+      intercollegiate rocketry competition. The team competes in the 30k,
+      Student Research and Designed (SRAD) category, meaning they design all
+      components of a rocket to reach or get as close to 30,000 feet as
+      possible.
     </Fragment>
 
     <Fragment slot="bg">
@@ -75,5 +87,154 @@ const metadata = {
     </Fragment>
   </ProjectBlurb>
 
-  </Features>
+  <MeetTheTeams
+    title="Meet the Teams"
+    tabs={[
+      "Overview",
+      "Structures",
+      "Avionics",
+      "Aerodynamics",
+      "Recovery",
+      "Payload",
+      "Propulsion",
+    ]}
+  >
+    <TeamOverview
+      slot="Overview"
+      title="TBD"
+      image={{
+        src: "",
+        alt: "TBD",
+      }}
+      stats={[
+        { name: "HEIGHT", values: ["TBD", "TBD"] },
+        { name: "DIAMETER", values: ["TBD", "TBD"] },
+        { name: "MASS", values: ["TBD", "TBD"] },
+        { name: "THRUST", values: ["TBD", "TBD"] },
+        { name: "MOTOR", values: ["TBD"] },
+        { name: "APOGEE", values: ["TBD", "TBD"] },
+        { name: "TOP SPEED", values: ["TBD"] },
+      ]}
+    >
+      <TeamOverviewLeader
+        title="Project Manager"
+        people={[
+          {
+            name: "TBD",
+            linkedins: [],
+            emails: [],
+          },
+        ]}
+      />
+      <TeamOverviewLeader
+        title="Deputy PM"
+        people={[
+          {
+            name: "TBD",
+            // linkedins: ["http://linkedin.com/in/alex-chou-b26b4514a"],
+            // emails: ["chou.315@osu.edu"],
+          },
+          {
+            // name: "Abby Atchley",
+            // emails: ["atchley.23@osu.edu"],
+          },
+        ]}
+      />
+    </TeamOverview>
+
+    <SubteamInfo
+      slot="Structures"
+      title="Structures"
+      images={[{
+        src: "~/assets/images/projects/sac/structures.webp",
+        alt: "Structures Team",
+      }]}
+      lead={{
+        name: "TBD",
+        // linkedins: ["https://www.linkedin.com/in/ryansaleme"],
+        // emails: ["saleme.2@osu.edu"],
+      }}
+      description="The Structures team is responsible for designing and testing all airframe components for the rocket. The team focuses on the research and development of airframes, fins, nose cones, and any specialty aerodynamic components. They also conduct structural tests to verify manufacturing techniques and airframe design."
+    />
+
+    <SubteamInfo
+      slot="Avionics"
+      title="Avionics"
+      images={[{
+        src: "~/assets/images/projects/sac/avionics.webp",
+        alt: "Avionics Bay",
+      }]}
+      lead={{
+        name: "Toby Simpson",
+        emails: [""],
+      }}
+      description="The Avionics team is responsible for designing, testing, and manufacturing all flight computers, sensors, and telemetry systems and ensuring that rocket recovery systems are functional. Avionics works closely with all teams to collect proper data for a successful flight. Additionally, they work closely with Recovery and Payload to assist and ensure the proper systems and data collection systems work for their needs."
+    />
+
+    <SubteamInfo
+      slot="Aerodynamics"
+      title="Aerodynamics"
+      images={[{
+        src: "~/assets/images/projects/sac/aerodynamics.webp",
+        alt: "CFD Simulation",
+      }]}
+      lead={{
+        name: "TBD",
+        // emails: [""],
+      }}
+      description="The Aerodynamics team focuses on evaluating the performance of the rocket during flight. Recently the team has been analyzing the effects of the transition piece in the middle of the rocket in addition to the nose cone shape. Work includes consulting aerodynamic literature and using Ansys Fluent to run Computational Fluid Dynamics simulations."
+    />
+
+    <SubteamInfo
+      slot="Recovery"
+      title="Recovery"
+      images={[
+        {
+          src: "~/assets/images/projects/sac/recovery1.webp",
+          alt: "Testing of parachute cord",
+        },
+        {
+          src: "~/assets/images/projects/sac/recovery2.webp",
+          alt: "Deployed parachute after landing",
+        },
+      ]}
+      lead={{
+        name: "TBD",
+        // emails: [""],
+      }}
+      description="The Recovery team focuses on designing and making the vehicle’s recovery systems. <i>TBD</i> utilizes a 48″ drogue with a 216″ main chute on a dual deploy, single separation configuration. Work includes chute maintenance and designing custom ejection charge canisters and deployment bags."
+    />
+
+    <SubteamInfo
+      slot="Payload"
+      title="Payload"
+      images={[
+        {
+          src: "~/assets/images/projects/sac/payload.webp",
+          alt: "Payload",
+        },
+      ]}
+      lead={{
+        name: "TBD",
+        // emails: [""],
+      }}
+      description="The Payload team focuses on designing a payload that conforms to the competition requirements. The Payload team works to have multiple experiments onboard, including a team concept and an outreach project working with local organizations in Columbus, OH. Work includes experiment brainstorming, design, development, and analysis post-flight."
+    />
+
+    <SubteamInfo
+      slot="Propulsion"
+      title="Propulsion"
+      images={[
+        {
+          src: "~/assets/images/projects/sac/propulsion.webp",
+          alt: "Static fire of student-developed rocket motor",
+        },
+      ]}
+      lead={{
+        name: "TBD",
+        // emails: [""],
+      }}
+      description="The Propulsion team researches and develops a solid propellant rocket motor. Work includes creating a custom propellant formula, utilizing solid motor fabrication techniques, conducting motor hot fire tests to verify design, and integration to launch vehicle."
+    />
+  </MeetTheTeams>
 </Layout>

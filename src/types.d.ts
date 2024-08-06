@@ -112,18 +112,11 @@ export interface Headline {
   classes?: Record<string, string>;
 }
 
-interface TeamMember {
+export interface TeamMember {
   name?: string;
-  job?: string;
-  image?: Image;
-  socials?: Array<Social>;
-  description?: string;
-  classes?: Record<string, string>;
-}
-
-interface Social {
-  icon?: string;
-  href?: string;
+  title?: string;
+  linkedins?: string[],
+  emails?: string[],
 }
 
 export interface Stat {
