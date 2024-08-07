@@ -3,13 +3,14 @@
 ## Plans
 * [X] Home page
 * [X] NASA Info
-* [-] NASA Meet the Teams
+* [X] NASA Meet the Teams
 * [X] SAC Info
-* [-] SAC Meet the Teams
+* [X] SAC Meet the Teams
 * [X] Liquids Info
-* [-] Liquids Meet the Teams
+* [X] Liquids Meet the Teams
 * [ ] Leadership
-* [ ] New Member Info (meeting/carpool times, etc.)
+* [X] Meeting Times
+* [ ] Meeting Locations
 * [ ] Sponsors
 * [ ] Contact
 
