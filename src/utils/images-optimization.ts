@@ -4,9 +4,9 @@ import { transformUrl, parseUrl } from 'unpic';
 import type { ImageMetadata } from 'astro';
 import type { HTMLAttributes } from 'astro/types';
 
-type Layout = 'fixed' | 'constrained' | 'fullWidth' | 'cover' | 'responsive' | 'contained';
+type Layout = 'fixed' | 'constrained' | 'fullWidth' | 'cover' | 'responsive' | 'contained' | 'custom';
 
-export interface AttributesProps extends HTMLAttributes<'img'> {}
+export interface AttributesProps extends HTMLAttributes<'img'> { }
 
 export interface ImageProps extends Omit<HTMLAttributes<'img'>, 'src'> {
   src?: string | ImageMetadata | null;
@@ -125,10 +125,7 @@ const getStyle = ({
   layout?: string;
   background?: string;
 }) => {
-  const styleEntries: Array<[prop: string, value: string | undefined]> = [
-    ['object-fit', objectFit],
-    ['object-position', objectPosition],
-  ];
+  const styleEntries: Array<[prop: string, value: string | undefined]> = [];
 
   // If background is a URL, set it to cover the image and not repeat
   if (background?.startsWith('https:') || background?.startsWith('http:') || background?.startsWith('data:')) {
@@ -138,36 +135,42 @@ const getStyle = ({
   } else {
     styleEntries.push(['background', background]);
   }
-  if (layout === 'fixed') {
-    styleEntries.push(['width', pixelate(width)]);
-    styleEntries.push(['height', pixelate(height)]);
-    styleEntries.push(['object-position', 'top left']);
-  }
-  if (layout === 'constrained') {
-    styleEntries.push(['max-width', pixelate(width)]);
-    styleEntries.push(['max-height', pixelate(height)]);
-    styleEntries.push(['aspect-ratio', aspectRatio ? `${aspectRatio}` : undefined]);
-    styleEntries.push(['width', '100%']);
-  }
-  if (layout === 'fullWidth') {
-    styleEntries.push(['width', '100%']);
-    styleEntries.push(['aspect-ratio', aspectRatio ? `${aspectRatio}` : undefined]);
-    styleEntries.push(['height', pixelate(height)]);
-  }
-  if (layout === 'responsive') {
-    styleEntries.push(['width', '100%']);
-    styleEntries.push(['height', 'auto']);
-    styleEntries.push(['aspect-ratio', aspectRatio ? `${aspectRatio}` : undefined]);
-  }
-  if (layout === 'contained') {
-    styleEntries.push(['max-width', '100%']);
-    styleEntries.push(['max-height', '100%']);
-    styleEntries.push(['object-fit', 'contain']);
-    styleEntries.push(['aspect-ratio', aspectRatio ? `${aspectRatio}` : undefined]);
-  }
-  if (layout === 'cover') {
-    styleEntries.push(['max-width', '100%']);
-    styleEntries.push(['max-height', '100%']);
+
+  if (layout !== 'custom') {
+    styleEntries.push(['object-fit', objectFit]);
+    styleEntries.push(['object-position', objectPosition]);
+
+    if (layout === 'fixed') {
+      styleEntries.push(['width', pixelate(width)]);
+      styleEntries.push(['height', pixelate(height)]);
+      styleEntries.push(['object-position', 'top left']);
+    }
+    if (layout === 'constrained') {
+      styleEntries.push(['max-width', pixelate(width)]);
+      styleEntries.push(['max-height', pixelate(height)]);
+      styleEntries.push(['aspect-ratio', aspectRatio ? `${aspectRatio}` : undefined]);
+      styleEntries.push(['width', '100%']);
+    }
+    if (layout === 'fullWidth') {
+      styleEntries.push(['width', '100%']);
+      styleEntries.push(['aspect-ratio', aspectRatio ? `${aspectRatio}` : undefined]);
+      styleEntries.push(['height', pixelate(height)]);
+    }
+    if (layout === 'responsive') {
+      styleEntries.push(['width', '100%']);
+      styleEntries.push(['height', 'auto']);
+      styleEntries.push(['aspect-ratio', aspectRatio ? `${aspectRatio}` : undefined]);
+    }
+    if (layout === 'contained') {
+      styleEntries.push(['max-width', '100%']);
+      styleEntries.push(['max-height', '100%']);
+      styleEntries.push(['object-fit', 'contain']);
+      styleEntries.push(['aspect-ratio', aspectRatio ? `${aspectRatio}` : undefined]);
+    }
+    if (layout === 'cover') {
+      styleEntries.push(['max-width', '100%']);
+      styleEntries.push(['max-height', '100%']);
+    }
   }
 
   const styles = Object.fromEntries(styleEntries.filter(([, value]) => value));

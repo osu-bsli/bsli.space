@@ -3,42 +3,54 @@ import Layout from "~/layouts/PageLayout.astro";
 
 import ProjectHero from "~/components/widgets/ProjectHero.astro";
 import ProjectBlurb from "~/components/widgets/ProjectBlurb.astro";
+import MeetTheTeams from "~/components/widgets/MeetTheTeams.astro";
+import SubteamInfo from "~/components/widgets/SubteamInfo.astro";
+import TeamOverview from "~/components/widgets/TeamOverview.astro";
+import TeamOverviewLeader from "~/components/widgets/TeamOverviewLeader.astro";
 
 const metadata = {
-    title: "BSLI — The Ohio State University",
-    ignoreTitleTemplate: true,
+  title: "BSLI — The Ohio State University",
+  ignoreTitleTemplate: true,
 };
 ---
 
 <Layout metadata={metadata}>
   <ProjectHero
-      image={{
-          src: "~/assets/images/projects/liquids/hero.jpg",
-          alt: "23′-24′ Liquids Team",
-      }}
-      tagline={"23′-24′ Liquids Team"}
+    image={{
+      src: "~/assets/images/projects/liquids/hero.jpg",
+      alt: "23′-24′ Liquids Team",
+    }}
+    tagline={"23′-24′ Liquids Team"}
   >
-      <Fragment slot="title">Liquids Project</Fragment>
+    <Fragment slot="title">Liquids Project</Fragment>
 
-      <Fragment slot="subtitle">
-        Our liquids project works to develop student-designed engines while fostering students’ skills with hands-on experiences.
-      </Fragment>
+    <Fragment slot="subtitle">
+      Our liquids project works to develop student-designed engines while
+      fostering students’ skills with hands-on experiences.
+    </Fragment>
   </ProjectHero>
 
   <ProjectBlurb
     title="The Liquid Engine Project strives to develop liquid rocketry at Ohio State"
     image={{
-      src: '~/assets/images/projects/liquids/in-the-field.webp',
-      alt: 'Liquids Rocket Engine in the Field',
+      src: "~/assets/images/projects/liquids/in-the-field.webp",
+      alt: "Liquids Rocket Engine in the Field",
     }}
   >
     <Fragment slot="content">
       <p class="mb-8">
-      Since the beginning, we’ve dreamed of reaching the Karmen line, but it takes a lot of work to get there. Our work in both the NASA Student Launch and Spaceport America Cup projects has helped to prepare the foundation; now it’s time to reach new heights. The liquids project works to develop student-designed engines while providing fostering students’ skills with hands-on experiences.
+        Since the beginning, we’ve dreamed of reaching the Karmen line, but it
+        takes a lot of work to get there. Our work in both the NASA Student
+        Launch and Spaceport America Cup projects has helped to prepare the
+        foundation; now it’s time to reach new heights. The liquids project
+        works to develop student-designed engines while providing fostering
+        students’ skills with hands-on experiences.
       </p>
 
       <p>
-      The liquids project has successfully test-fired a commercial LR-101 rocket engine, and work is now focused on developing their additively-manufactured Serenity engine.
+        The liquids project has successfully test-fired a commercial LR-101
+        rocket engine, and work is now focused on developing their
+        additively-manufactured Serenity engine.
       </p>
     </Fragment>
 
@@ -47,5 +59,122 @@ const metadata = {
     </Fragment>
   </ProjectBlurb>
 
-  </Features>
+  <MeetTheTeams
+    title="Meet the Teams"
+    tabs={["Overview", "Propulsion", "Fluids", "Electronics"]}
+  >
+    <TeamOverview
+      slot="Overview"
+      title="LR-101"
+      image={{
+        src: "~/assets/images/projects/liquids/overview.webp",
+        alt: "LR-101 Engine",
+      }}
+      stats={[
+        { name: "THRUST", values: ["3.2 kN", "710 lbf"] },
+        { name: "SPECIFIC IMPULSE", values: ["193 sec"] },
+        { name: "CHAMBER PRESSURE", values: ["2.1 MPa", "300 psi"] },
+      ]}
+    >
+      <TeamOverviewLeader
+        title="Project Manager"
+        people={[
+          {
+            name: "Alex Campbell",
+            linkedins: ["https://www.linkedin.com/in/alexbflat"],
+            emails: ["campbell.2319@osu.edu"],
+          },
+        ]}
+      />
+      <TeamOverviewLeader
+        title="Deputy PM"
+        people={[
+          {
+            name: "Zach Campbell",
+            linkedins: ["https://www.linkedin.com/in/zach-campbell-8bb08b244"],
+            emails: ["campbell.2528@osu.edu"],
+          },
+        ]}
+      />
+    </TeamOverview>
+
+    <SubteamInfo
+      slot="Propulsion"
+      title="Propulsion"
+      images={[
+        {
+          src: "~/assets/images/projects/liquids/propulsion.webp",
+          alt: "Rocket Motor",
+        },
+      ]}
+      lead={{
+        name: "Harrison Pasquinilli",
+        emails: ["pasquinilli.3@osu.edu"],
+      }}
+    >
+      <p>
+        The propulsion team is responsible for designing and manufacturing
+        liquid rocket engines. The team’s work focuses primarily on the design
+        and analysis of engines pre and post test fire. Members are taught
+        useful skills and gain valuable experience necessary for working with
+        liquid engines in the industry.
+      </p>
+
+      <p>
+        Tools like ANSYS Fluent, Converge CFD, MATLAB, SOLIDWORKS, and NASA CEA
+        are taught and used.
+      </p>
+    </SubteamInfo>
+
+    <SubteamInfo
+      slot="Fluids"
+      title="Fluids"
+      images={[
+        {
+          src: "~/assets/images/projects/liquids/fluids.webp",
+          alt: "Fluids Team",
+        },
+      ]}
+      lead={{
+        name: "Nathan Becker",
+        emails: ["becker.729@osu.edu"],
+      }}
+    >
+      <p>
+        The fluids team designs, analyzes, assembles, and maintains all fluid
+        system lines on the test stand. This team is perfect for the
+        manufacturing-minded, as work is consistently being completed on the
+        stand during testing and test fires. Analysis and design are critical to
+        ensure a minimum amount of pressure loss to fluid lines.
+      </p>
+
+      <p>
+        Fluids utilize tools like SOLIDWORKS and GFSSP to design and analyze
+        fluid systems for assembly.
+      </p>
+    </SubteamInfo>
+
+    <SubteamInfo
+      slot="Electronics"
+      title="Electronics"
+      images={[
+        {
+          src: "~/assets/images/projects/liquids/electronics.webp",
+          alt: "Electronics Team",
+        },
+      ]}
+      lead={{
+        name: "Julian Hooks",
+        emails: ["hooks.82@osu.edu"],
+      }}
+    >
+      The electronics team designs and builds the data acquisition and control
+      systems that keep the test stand going. Work involves electronics design,
+      software design, data analysis, and other aspects of metrology.
+      Electronics also works to ensure valid remote data from the test stand
+      during test fires. This data is critical to ensure the correct amount of
+      pressure and propellant is present before a test fire is attempted.
+      Further, the data acquired is critical for the analysis of any test fires.
+    </SubteamInfo>
+  </MeetTheTeams>
 </Layout>

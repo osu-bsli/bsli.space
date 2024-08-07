@@ -7,11 +7,10 @@ import { type ImageProps } from "~/utils/images-optimization";
 export interface Props {
   title: string,
   lead: TeamMember,
-  description: string,
   images: Array<ImageProps>,
 }
 
-const { title, lead, description, images = [] } = Astro.props;
+const { title, lead, images = [] } = Astro.props;
 ---
 
 <div class="flex flex-col md:flex-row justify-center gap-8">
@@ -28,7 +27,9 @@ const { title, lead, description, images = [] } = Astro.props;
       <Socials linkedins={lead.linkedins} emails={lead.emails} />
     </div>
 
-    <p class="text-lg" set:html={description}></p>
+    <div class="flex flex-col gap-4 text-lg">
+      <slot/>
+    </div>
   </div>
 
   <div class="flex flex-col gap-4 md:w-1/2">
