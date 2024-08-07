@@ -12,14 +12,14 @@ interface Link {
 }
 
 interface Sponsor {
-  ariaLabel: string,
-  src: string,
-  href: string,
+  ariaLabel: string;
+  src: string;
+  href: string;
 }
 
 export interface Props {
-  sponsors1: Sponsor[],
-  sponsors2: Sponsor[],
+  sponsors1: Sponsor[];
+  sponsors2: Sponsor[];
   socialLinks: Link[];
   footNote?: string;
   theme?: string;
@@ -44,11 +44,11 @@ const {
 
   <div class="flex flex-col gap-4 max-w-5xl m-auto">
     <div
-      class="flex flex-row justify-center items-center flex-wrap gap-4 md:gap-8 [&>*]:w-32 [&>*]:md:w-64"
+      class="flex flex-row justify-center items-center flex-wrap gap-2 md:gap-4 [&>*]:w-32 [&>*]:md:w-64"
     >
       {
         sponsors1.map(({ ariaLabel, src, href }) => (
-          <a href={href}>
+          <a href={href} class="bg-white p-4 rounded">
             <Image layout="custom" src={src} alt={ariaLabel} />
           </a>
         ))
@@ -56,11 +56,11 @@ const {
     </div>
 
     <div
-      class="flex flex-row justify-center flex-wrap gap-4 md:gap-8 [&>*]:w-32 [&>*]:md:w-64"
+      class="flex flex-row justify-center flex-wrap gap-2 md:gap-4 [&>*]:w-32 [&>*]:md:w-64"
     >
       {
         sponsors2.map(({ ariaLabel, src, href }) => (
-          <a href={href}>
+          <a href={href} class="bg-white p-4 rounded">
             <Image layout="custom" src={src} alt={ariaLabel} />
           </a>
         ))
@@ -73,7 +73,7 @@ const {
       class="flex flex-col md:flex-row items-center md:justify-between pb-4 pt-12 md:py-6"
     >
       <Image
-        class="object-contain w-64"
+        class="object-contain w-64 bg-white p-1 rounded"
         layout="custom"
         src="~/assets/images/OSUCOE-Logo.webp"
         alt="OSU College of Engineering Logo"
