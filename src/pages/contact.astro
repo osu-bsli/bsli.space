@@ -1,12 +1,50 @@
 ---
 import Layout from "~/layouts/PageLayout.astro";
-import HeroText from "~/components/widgets/HeroText.astro";
+import Hero from "~/components/widgets/Hero.astro";
+import Content from "~/components/widgets/Content.astro";
+import Socials from "~/components/widgets/Socials.astro";
+import { getPermalink } from "~/utils/permalinks";
 
 const title = "Contact us";
 ---
 
 <Layout metadata={{ title }}>
-  <!-- HeroText Widget ******************* -->
+  <Hero tagline="Contact" title="Let's Connect!">
+    <Fragment slot="content">
+      <p class="pb-12">
+        Want to reach out to us? Have questions, comments, or concerns?! Get in
+        touch with us in the following ways or use the form!
+      </p>
 
-  <HeroText tagline="Contact" title="Let's Connect!" />
+      <div class="flex flex-col gap-8 text-center">
+        <div>
+          <h2 class="font-bold">General Inquiries</h2>
+          <p>
+            Email us at: <u><a href="mailto:eng-buckeyesli@osu.edu">eng-buckeyesli@osu.edu</a></u>
+          </p>
+        </div>
+
+        <div>
+          <h2 class="font-bold">Leadership/Project Inquiries</h2>
+          <p>
+            Find the right person on our <u><a href={getPermalink("/leadership")}>Leadership</a></u> page.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="font-bold">Social Media</h2>
+          <p>Check out one of our social media pages!</p>
+          <div class="flex justify-center">
+            <Socials
+              linkedins={[
+                "https://www.linkedin.com/company/the-buckeye-space-launch-initiative/",
+              ]}
+              facebooks={["https://www.facebook.com/spacelaunchinitiative/"]}
+              youtubes={["https://www.youtube.com/@buckeyesli1865/videos"]}
+            />
+          </div>
+        </div>
+      </div>
+    </Fragment>
+  </Hero>
 </Layout>
