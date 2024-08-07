@@ -41,7 +41,7 @@ const {
               {typeof image === 'string' ? (
                 <Fragment set:html={image} />
               ) : (
-                <Image class="size-64 rounded-lg mb-8"
+                <Image widths={[400, 800]} class="size-64 rounded-lg mb-8"
                   {...image}
                 />
               )}

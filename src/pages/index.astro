@@ -68,7 +68,6 @@ const metadata = {
   <OurProjects
     id="our-projects"
     title="Our Projects"
-    subtitle="The Buckeye Space Launch Initiative was founded with the goal of reaching space. We have become so much more by enabling students to become innovators and expand research and technology in the aerospace industry. From our competitive teams in rocketry to our liquid engine development program, we encourage students to innovate, get their hands dirty, and learn. Each subteam project has different goals and restrictions, giving students wide range of options to choose from."
     items={[
       {
         name: "NASA Student Launch Initiative (NASA)",
@@ -131,7 +130,19 @@ const metadata = {
         ],
       },
     ]}
-  />
+  >
+    <Fragment slot="subtitle">
+      <p class="text-center">
+        All BSLI project teams meet in the
+        <b>College of Engineering Makerspace</b>, located in
+        <b>Bolz Hall</b>.
+      </p>
+
+      <p class="text-center">
+        Meeting times can be found below, underneath each team description.
+      </p>
+    </Fragment>
+  </OurProjects>
 
   <!-- Steps Widget ****************** -->
 
@@ -160,7 +171,7 @@ const metadata = {
       {
         title: 'Step 4: <span class="font-medium">Talk to Us!</span>',
         description:
-          "Show up to a meeting. Talk to some people in each subteam and check out the vibe.",
+          "Show up to a meeting. Talk to some people in each project team and check out the vibe.",
         icon: "tabler:friends",
       },
       {
@@ -193,9 +204,7 @@ const metadata = {
       },
     ]}
   >
-    <Fragment slot="title">
-      Ready to join the leading edge of student rocketry at Ohio State?
-    </Fragment>
+    <Fragment slot="title"> Ready to build some rockets? </Fragment>
 
     <Fragment slot="subtitle"> </Fragment>
   </CallToAction>

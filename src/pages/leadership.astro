@@ -1,0 +1,18 @@
+---
+import Hero from "~/components/widgets/Hero.astro";
+import Layout from "~/layouts/PageLayout.astro";
+
+const title = "Leadership";
+---
+
+<Layout metadata={{ title }}>
+  <Hero
+    tagline="UNDER CONSTRUCTION"
+  >
+    <Fragment slot="title">This page will be available soon.</Fragment>
+
+    <Fragment slot="subtitle">
+      We are still in the process of transitioning BSLI to new leadership. Check back soon!
+    </Fragment>
+  </Hero>
+</Layout>
