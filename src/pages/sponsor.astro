@@ -1,0 +1,68 @@
+---
+import Hero from "~/components/widgets/Hero.astro";
+import WeAreBsli from "~/components/widgets/WeAreBsli.astro";
+import Staff from "~/components/widgets/Staff.astro";
+import Layout from "~/layouts/PageLayout.astro";
+
+const title = "Sponsor us";
+---
+
+<Layout metadata={{ title }}>
+  <Hero
+    actions={[
+      {
+        variant: "primary",
+        text: "Primary / Individual",
+        href: "https://www.giveto.osu.edu/makeagift/details/314735?fund=314735",
+      },
+      {
+        variant: "primary",
+        text: "Corporate",
+        href: "#corporate",
+      },
+    ]}
+  >
+    <Fragment slot="title"> Want to sponsor us? </Fragment>
+
+    <Fragment slot="subtitle">
+      Without donations by generous contributors like you, private or corporate,
+      we could not do our work. Any contribution brings us one step closer to
+      reaching the Karman line, and will let us make the experience for our
+      members even better.
+    </Fragment>
+  </Hero>
+
+  <WeAreBsli
+    id="corporate"
+    tagline="Corporate sponsorships"
+    title="Let's get in touch!"
+    image={{
+      src: "~/assets/images/Hana Winchester.png",
+      alt: "Scott Lab at OSU",
+      layout: "contained",
+    }}
+  >
+    <Fragment slot="content">
+      <div class="flex flex-col gap-8">
+        <p>
+          Hi, I'm Hana Winchester! I'm the <b>Sponsorship Chair</b> for the Buckeye
+          Space Launch Initiative. If you just want to learn more or want to sponsor
+          us, email me to get in touch.
+        </p>
+
+        <Staff
+          title="Sponsorship Chair:"
+          person={{
+            name: "Hana Winchester",
+            linkedin: "https://www.linkedin.com/in/hana-winchester-988282258/",
+            email: "winchester.36@osu.edu",
+          }}
+        />
+      </div>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-gray-50 dark:bg-transparent"></div>
+    </Fragment>
+  </WeAreBsli>
+</Layout>

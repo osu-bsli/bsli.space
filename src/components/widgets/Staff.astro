@@ -1,0 +1,11 @@
+---
+import Socials from "./Socials.astro";
+
+const { title, person } = Astro.props;
+---
+
+<div class="">
+  <h2 class="text-xl font-bold">{title}</h2>
+  <h2 class="text-xl font-bold text-primary">{person.name}</h2>
+  <Socials linkedins={[person.linkedin]} emails={[person.email]}/>
+</tr>

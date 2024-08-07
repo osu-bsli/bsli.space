@@ -28,8 +28,8 @@ export const headerData = {
       href: getPermalink('/leadership'),
     },
     {
-      text: 'Sponsors',
-      href: getPermalink('/sponsors'),
+      text: 'Sponsor',
+      href: getPermalink('/sponsor'),
     },
     {
       text: 'Contact',
