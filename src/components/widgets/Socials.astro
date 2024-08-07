@@ -1,5 +1,6 @@
 ---
 import { Icon } from "astro-icon/components";
+import { twMerge } from "tailwind-merge";
 
 const {
   linkedins = [],
@@ -7,13 +8,12 @@ const {
   facebooks = [],
   youtubes = [],
   instagrams = [],
-  classes = [],
+  classes,
 } = Astro.props;
 ---
 
 <div
-  class="font-normal flex flex-row flex-wrap gap-x-3 my-2 text-muted"
-  class:list={classes}
+  class={twMerge("font-normal flex flex-row flex-wrap gap-x-3 my-2 text-muted", classes)}
 >
   {
     instagrams.map((instagram) => (
