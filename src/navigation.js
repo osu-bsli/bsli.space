@@ -40,18 +40,51 @@ export const headerData = {
 };
 
 export const footerData = {
-  links: [
-
+  sponsors1: [
+    {
+      src: "~/assets/images/sponsors/SAS.webp",
+      ariaLabel: "SAS Logo",
+      href: "https://specialaerospaceservices.com/"
+    },
+    {
+      src: "~/assets/images/sponsors/redwire.webp",
+      ariaLabel: "Redwire Logo",
+      href: "https://redwirespace.com/"
+    },
+    {
+      src: "~/assets/images/sponsors/altium.webp",
+      ariaLabel: "Altium Logo",
+      href: "https://www.altium.com/"
+    },
+    {
+      src: "~/assets/images/sponsors/ansys.webp",
+      ariaLabel: "Ansys Logo",
+      href: "https://www.ansys.com/"
+    },
+    {
+      src: "~/assets/images/sponsors/OSGC.webp",
+      ariaLabel: "Ohio Space Grant Consortium Logo",
+      href: "https://osgc.org/"
+    }
   ],
-  secondaryLinks: [
-
+  sponsors2: [
+    {
+      src:"~/assets/images/sponsors/OSUCOE.webp",
+      ariaLabel :"OSU College of Engineering Logo",
+      href: "https://engineering.osu.edu/"
+    },
+    {
+      src: "~/assets/images/sponsors/osu battelle center.webp",
+      ariaLabel: "OSU Battelle Center Logo",
+      href: "https://battellecenter.osu.edu/"
+    }
   ],
   socialLinks: [
-    { ariaLabel: 'X', icon: 'tabler:brand-x', href: '#' },
-    { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: '#' },
-    { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: '#' },
-    { ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') },
-    { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/onwidget/astrowind' },
+    { ariaLabel: 'LinkedIn', icon: 'tabler:brand-linkedin', href: 'https://www.linkedin.com/company/the-buckeye-space-launch-initiative' },
+    { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: 'https://www.facebook.com/spacelaunchinitiative/' },
+    { ariaLabel: 'YouTube', icon: 'tabler:brand-youtube', href: 'https://www.youtube.com/@buckeyesli1865/videos' },
+    { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: 'https://www.instagram.com/buckeye_sli/' },
+    { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/osu-bsli' },
   ],
   footNote: `
     © 2024 Buckeye Space Launch Initiative</a> · All rights reserved.

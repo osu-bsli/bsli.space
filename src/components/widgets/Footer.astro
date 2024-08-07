@@ -11,23 +11,24 @@ interface Link {
   icon?: string;
 }
 
-interface Links {
-  title?: string;
-  links: Array<Link>;
+interface Sponsor {
+  ariaLabel: string,
+  src: string,
+  href: string,
 }
 
 export interface Props {
-  links: Array<Links>;
-  secondaryLinks: Array<Link>;
-  socialLinks: Array<Link>;
+  sponsors1: Sponsor[],
+  sponsors2: Sponsor[],
+  socialLinks: Link[];
   footNote?: string;
   theme?: string;
 }
 
 const {
+  sponsors1 = [],
+  sponsors2 = [],
   socialLinks = [],
-  secondaryLinks = [],
-  links = [],
   footNote = "",
   theme = "light",
 } = Astro.props;
@@ -45,46 +46,25 @@ const {
     <div
       class="flex flex-row justify-center items-center flex-wrap gap-4 md:gap-8 [&>*]:w-32 [&>*]:md:w-64"
     >
-      <Image
-        layout="custom"
-        src="~/assets/images/sponsors/SAS.webp"
-        alt="SAS Logo"
-      />
-      <Image
-        layout="custom"
-        src="~/assets/images/sponsors/redwire.webp"
-        alt="Altium Logo"
-      />
-      <Image
-        layout="custom"
-        src="~/assets/images/sponsors/altium.webp"
-        alt="Altium Logo"
-      />
-      <Image
-        layout="custom"
-        src="~/assets/images/sponsors/ansys.webp"
-        alt="Ansys Logo"
-      />
-      <Image
-        layout="custom"
-        src="~/assets/images/sponsors/OSGC.webp"
-        alt="Ohio Space Grant Consortium Logo"
-      />
+      {
+        sponsors1.map(({ ariaLabel, src, href }) => (
+          <a href={href}>
+            <Image layout="custom" src={src} alt={ariaLabel} />
+          </a>
+        ))
+      }
     </div>
 
     <div
       class="flex flex-row justify-center flex-wrap gap-4 md:gap-8 [&>*]:w-32 [&>*]:md:w-64"
     >
-      <Image
-        layout="custom"
-        src="~/assets/images/sponsors/OSUCOE.webp"
-        alt="OSU College of Engineering Logo"
-      />
-      <Image
-        layout="custom"
-        src="~/assets/images/sponsors/osu battelle center.webp"
-        alt="OSU Battelle Center Logo"
-      />
+      {
+        sponsors2.map(({ ariaLabel, src, href }) => (
+          <a href={href}>
+            <Image layout="custom" src={src} alt={ariaLabel} />
+          </a>
+        ))
+      }
     </div>
   </div>
 
