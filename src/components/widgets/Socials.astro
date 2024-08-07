@@ -1,10 +1,19 @@
 ---
 import { Icon } from "astro-icon/components";
 
-const { linkedins = [], emails = [], facebooks = [], youtubes = [] } = Astro.props;
+const {
+  linkedins = [],
+  emails = [],
+  facebooks = [],
+  youtubes = [],
+  classes = [],
+} = Astro.props;
 ---
 
-<div class="text-base font-normal flex flex-row gap-3 text-gray-500 py-2">
+<div
+  class="font-normal flex flex-row flex-wrap gap-x-3 my-2 text-muted"
+  class:list={classes}
+>
   {
     linkedins.map((linkedin) => (
       <a class="flex flex-row gap-1" href={linkedin}>
@@ -18,7 +27,7 @@ const { linkedins = [], emails = [], facebooks = [], youtubes = [] } = Astro.pro
     emails.map((email) => (
       <a class="flex flex-row gap-1" href={"mailto:" + email}>
         <Icon name="tabler:mail" class="w-8 h-8" />
-        <p class="leading-loose">Email</p>
+        <p class="leading-loose">{email}</p>
       </a>
     ))
   }

@@ -54,6 +54,6 @@ export const footerData = {
     { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/onwidget/astrowind' },
   ],
   footNote: `
-    Buckeye Space Launch Initiative</a> · All rights reserved.
+    © 2024 Buckeye Space Launch Initiative</a> · All rights reserved.
   `,
 };

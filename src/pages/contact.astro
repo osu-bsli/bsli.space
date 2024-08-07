@@ -13,21 +13,26 @@ const title = "Contact us";
     <Fragment slot="content">
       <p class="pb-12">
         Want to reach out to us? Have questions, comments, or concerns?! Get in
-        touch with us in the following ways or use the form!
+        touch with us in the following ways:
       </p>
 
       <div class="flex flex-col gap-8 text-center">
         <div>
           <h2 class="font-bold">General Inquiries</h2>
           <p>
-            Email us at: <u><a href="mailto:eng-buckeyesli@osu.edu">eng-buckeyesli@osu.edu</a></u>
+            Email us at:
+            <div class="flex justify-center">
+              <Socials emails={["eng-buckeyesli@osu.edu"]} />
+            </div>
           </p>
         </div>
 
         <div>
           <h2 class="font-bold">Leadership/Project Inquiries</h2>
           <p>
-            Find the right person on our <u><a href={getPermalink("/leadership")}>Leadership</a></u> page.
+            Find the right person on our <u
+              ><a href={getPermalink("/leadership")}>Leadership</a></u
+            > page.
           </p>
         </div>
 

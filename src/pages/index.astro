@@ -1,16 +1,16 @@
 ---
-import Layout from '~/layouts/PageLayout.astro';
+import Layout from "~/layouts/PageLayout.astro";
 
-import Hero from '~/components/widgets/Hero.astro';
-import Steps from '~/components/widgets/Steps.astro';
-import WeAreBsli from '~/components/widgets/WeAreBsli.astro';
-import OurProjects from '~/components/widgets/OurProjects.astro';
-import CallToAction from '~/components/widgets/CallToAction.astro';
+import Hero from "~/components/widgets/Hero.astro";
+import Steps from "~/components/widgets/Steps.astro";
+import WeAreBsli from "~/components/widgets/WeAreBsli.astro";
+import OurProjects from "~/components/widgets/OurProjects.astro";
+import CallToAction from "~/components/widgets/CallToAction.astro";
 
-import { getHomePermalink, getPermalink } from '~/utils/permalinks';
+import { getHomePermalink, getPermalink } from "~/utils/permalinks";
 
 const metadata = {
-  title: 'BSLI — The Ohio State University',
+  title: "BSLI — The Ohio State University",
   ignoreTitleTemplate: true,
 };
 ---
@@ -21,15 +21,21 @@ const metadata = {
   <Hero
     actions={[
       {
-        variant: 'primary',
-        text: 'Get involved 🚀',
-        href: getHomePermalink() + '#get-involved',
+        variant: "primary",
+        text: "Get involved 🚀",
+        href: getHomePermalink() + "#get-involved",
       },
-      { text: 'Learn more', href: '#we-are-bsli' },
+      { text: "Learn more", href: "#we-are-bsli" },
+      { text: "Sponsor us!", href: getPermalink("/sponsor") },
     ]}
-    image={{ src: '~/assets/images/BSLI-Added-payload-both-teams.png', alt: 'Payload & Spaceport Teams' }}
+    image={{
+      src: "~/assets/images/BSLI-Added-payload-both-teams.png",
+      alt: "Payload & Spaceport Teams",
+    }}
   >
-    <Fragment slot="title"><span class="text-secondary">THE</span> Buckeye Space Launch Initiative </Fragment>
+    <Fragment slot="title"
+      ><span class="text-secondary">THE</span> Buckeye Space Launch Initiative
+    </Fragment>
 
     <Fragment slot="subtitle">
       <span class="hidden sm:inline">
@@ -44,13 +50,14 @@ const metadata = {
     tagline="WHO WE ARE"
     title="WE ARE BSLI."
     image={{
-      src: '~/assets/images/scottlab2.jpg',
-      alt: 'Scott Lab at OSU',
+      src: "~/assets/images/scottlab2.jpg",
+      alt: "Scott Lab at OSU",
     }}
   >
     <Fragment slot="content">
-      We are <b>The Ohio State University’s</b> collegiate rocketry team, striving to expand research and technology in the
-      aerospace industry. Among our three project teams, we launch a wide array of payloads to low and high altitudes.
+      We are <b>The Ohio State University’s</b> collegiate rocketry team, striving
+      to expand research and technology in the aerospace industry. Among our three
+      project teams, we launch a wide array of payloads to low and high altitudes.
     </Fragment>
 
     <Fragment slot="bg">
@@ -64,67 +71,67 @@ const metadata = {
     subtitle="The Buckeye Space Launch Initiative was founded with the goal of reaching space. We have become so much more by enabling students to become innovators and expand research and technology in the aerospace industry. From our competitive teams in rocketry to our liquid engine development program, we encourage students to innovate, get their hands dirty, and learn. Each subteam project has different goals and restrictions, giving students wide range of options to choose from."
     items={[
       {
-        name: 'NASA Student Launch Initiative (NASA)',
+        name: "NASA Student Launch Initiative (NASA)",
         description:
-          'NASA SLI is a research-based, competitive, experiential exploration project striving to provide relevant research through payload components to support the development of NASA’s Space Launch System (SLS) program.',
+          "NASA SLI is a research-based, competitive, experiential exploration project striving to provide relevant research through payload components to support the development of NASA’s Space Launch System (SLS) program.",
         image: {
-          src: '~/assets/images/subteam-nasa.webp',
-          alt: 'NASA Subteam',
+          src: "~/assets/images/subteam-nasa.webp",
+          alt: "NASA Subteam",
         },
         href: getPermalink("/projects/nasa"),
         meetingTimes: [
           {
-            "day": "Tuesdays",
-            "time": "6-8 pm"
+            day: "Tuesdays",
+            time: "6-8 pm",
           },
           {
-            "day": "Sundays",
-            "time": "3-5 pm"
-          }
-        ]
+            day: "Sundays",
+            time: "3-5 pm",
+          },
+        ],
       },
       {
-        name: 'Spaceport America Cup (SAC)',
+        name: "Spaceport America Cup (SAC)",
         description:
-          'SAC competes at Spaceport America Cup, an international collegiate rocketry competition hosted in New Mexico every summer. BSLI competes in the 30k Student Research and Developed (SRAD) category.',
+          "SAC competes at Spaceport America Cup, an international collegiate rocketry competition hosted in New Mexico every summer. BSLI competes in the 30k Student Research and Developed (SRAD) category.",
         image: {
-          src: '~/assets/images/subteam-sac.webp',
-          alt: 'Spaceport America Cup Team',
+          src: "~/assets/images/subteam-sac.webp",
+          alt: "Spaceport America Cup Team",
         },
         href: getPermalink("/projects/sac"),
         meetingTimes: [
           {
-            "day": "Wednesdays",
-            "time": "7-9 pm"
+            day: "Wednesdays",
+            time: "7-9 pm",
           },
           {
-            "day": "Sundays",
-            "time": "1-3 pm"
-          }
-        ]
+            day: "Sundays",
+            time: "1-3 pm",
+          },
+        ],
       },
       {
-        name: 'Liquid Engine Project (Liquids)',
-        description: 'BSLI Liquids team focuses on liquid bipropellant rocket engine development. Current development includes working towards test firing an LR-101, and further refining our 1st custom engine.',
+        name: "Liquid Engine Project (Liquids)",
+        description:
+          "BSLI Liquids team focuses on liquid bipropellant rocket engine development. Current development includes working towards test firing an LR-101, and further refining our 1st custom engine.",
         image: {
-          src: '~/assets/images/subteam-liquids.webp',
-          alt: 'Liquids Team',
+          src: "~/assets/images/subteam-liquids.webp",
+          alt: "Liquids Team",
         },
         href: getPermalink("/projects/liquids"),
         meetingTimes: [
           {
-            "day": "Thursdays",
-            "time": "6 pm"
+            day: "Thursdays",
+            time: "6 pm",
           },
           {
-            "day": "Sundays",
-            "time": "4 pm"
-          }
-        ]
+            day: "Sundays",
+            time: "4 pm",
+          },
+        ],
       },
     ]}
-  >
-  </OurProjects>
+  />
 
   <!-- Steps Widget ****************** -->
 
@@ -133,34 +140,39 @@ const metadata = {
     title="Get Involved"
     items={[
       {
-        title: 'Step 1: <u><a href="#our-projects"><span class="font-medium">Find your Project Subteam.</span></a></u>',
-        description: 'Research our teams! Across NASA, Spaceport, and Liquids, there is a place for you in BSLI.',
-        icon: 'tabler:search',
+        title:
+          'Step 1: <u><a href="#our-projects"><span class="font-medium">Find your Project Subteam.</span></a></u>',
+        description:
+          "Research our teams! Across NASA, Spaceport, and Liquids, there is a place for you in BSLI.",
+        icon: "tabler:search",
       },
       {
-        title: 'Step 2: <span class="font-medium">Check if the team meets when you\'re available.</span>',
+        title:
+          'Step 2: <span class="font-medium">Check if the team meets when you\'re available.</span>',
         description: `Meeting times can be found in the <u><a href="#our-projects">"Our Projects"</a></u> section above.`,
-        icon: 'tabler:clock',
+        icon: "tabler:clock",
       },
       {
         title: 'Step 3: <span class="font-medium">Join our Slack.</span>',
-        description: 'You can find the link at the bottom of this page.',
-        icon: 'tabler:message-chatbot',
+        description: "You can find the link at the bottom of this page.",
+        icon: "tabler:message-chatbot",
       },
       {
         title: 'Step 4: <span class="font-medium">Talk to Us!</span>',
-        description: 'Show up to a meeting. Talk to some people in each subteam and check out the vibe.',
-        icon: 'tabler:friends',
+        description:
+          "Show up to a meeting. Talk to some people in each subteam and check out the vibe.",
+        icon: "tabler:friends",
       },
       {
-        title: 'Step 5: <span class="font-medium">Consider joining a leadership position!</span>',
+        title:
+          'Step 5: <span class="font-medium">Consider joining a leadership position!</span>',
         description: `If you enjoy being part of BSLI, check out the variety of leadership positions available on the <u><a href="${getPermalink("leadership")}"><span class="font-medium">Leadership</a></u> page.`,
-        icon: 'tabler:bulb',
+        icon: "tabler:bulb",
       },
     ]}
     image={{
-      src: '~/assets/images/DSC4344.webp',
-      alt: 'Steps image',
+      src: "~/assets/images/DSC4344.webp",
+      alt: "Steps image",
     }}
   >
     <Fragment slot="bg">
@@ -168,27 +180,23 @@ const metadata = {
     </Fragment>
   </Steps>
 
-   <!-- CallToAction Widget *********** -->
+  <!-- CallToAction Widget *********** -->
 
-   <CallToAction
-   actions={[
-     {
-       variant: 'primary',
-       text: 'Join our Slack',
-       href: 'https://linktr.ee/buckeye_sli',
-       target: '_blank',
-       icon: 'tabler:rocket',
-     },
-   ]}
- >
-   <Fragment slot="title">
-     Ready to join the leading edge of student rocketry at Ohio State?
-   </Fragment>
+  <CallToAction
+    actions={[
+      {
+        variant: "primary",
+        text: "Join our Slack",
+        href: "https://linktr.ee/buckeye_sli",
+        target: "_blank",
+        icon: "tabler:rocket",
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Ready to join the leading edge of student rocketry at Ohio State?
+    </Fragment>
 
-   <Fragment slot="subtitle">
-
-   </Fragment>
- </CallToAction>
-
-
+    <Fragment slot="subtitle"> </Fragment>
+  </CallToAction>
 </Layout>

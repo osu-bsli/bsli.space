@@ -24,7 +24,7 @@ const { title, lead, images = [] } = Astro.props;
         >
       </h3>
 
-      <Socials linkedins={lead.linkedins} emails={lead.emails} />
+      <Socials {...lead} />
     </div>
 
     <div class="flex flex-col gap-4 text-lg">

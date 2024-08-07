@@ -4,7 +4,7 @@ import Image from "~/components/common/Image.astro";
 const { title, slot, stats = [], image } = Astro.props;
 ---
 
-<div class="flex flex-col md:flex-row justify-center">
+<div class="flex flex-col justify-center md:flex-row md:gap-8">
   <div class="flex flex-col md:w-1/2">
     <h2
       id={"tab-content-" + title}
