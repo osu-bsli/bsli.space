@@ -84,9 +84,9 @@ const metadata = {
     tabs={[
       "Overview",
       "Structures",
-      "Avionics",
+      "Flight Systems",
+      "Aerodynamics",
       "Payload",
-      "Safety & Recovery",
     ]}
   >
     <TeamOverview
@@ -107,27 +107,11 @@ const metadata = {
     >
       <TeamOverviewLeader
         title="Project Manager"
-        people={[
-          {
-            name: "Madi Herrmann",
-            linkedins: ["http://linkedin.com/in/mh24"],
-            emails: ["herrmann.164@osu.edu"],
-          },
-        ]}
+        people={["Matthew Heinzman"]}
       />
       <TeamOverviewLeader
         title="Deputy PM"
-        people={[
-          {
-            name: "Alex Chou",
-            linkedins: ["http://linkedin.com/in/alex-chou-b26b4514a"],
-            emails: ["chou.315@osu.edu"],
-          },
-          {
-            name: "Abby Atchley",
-            emails: ["atchley.23@osu.edu"],
-          },
-        ]}
+        people={["Abby Atchley", "Nisha Kumar"]}
       />
     </TeamOverview>
 
@@ -140,11 +124,7 @@ const metadata = {
           alt: "Rocket mounted on a launch stand",
         },
       ]}
-      lead={{
-        name: "Ryan Saleme",
-        linkedins: ["https://www.linkedin.com/in/ryansaleme"],
-        emails: ["saleme.2@osu.edu"],
-      }}
+      leads={["Kennedy Swyers"]}
     >
       The NASA SL structures team is responsible for designing and testing all
       structural components for the rocket. The team focuses on creating a
@@ -155,27 +135,33 @@ const metadata = {
     </SubteamInfo>
 
     <SubteamInfo
-      slot="Avionics"
-      title="Avionics"
+      slot="Flight Systems"
+      title="Flight Systems"
       images={[
         {
           src: "~/assets/images/projects/nasa/avionics.webp",
           alt: "NASA SL avionics bay",
         },
       ]}
-      lead={{
-        name: "Niraj Patel",
-        linkedins: ["https://www.linkedin.com/in/nirajpatel09"],
-        emails: ["patel.4092@osu.edu"],
-      }}
+      leads={["Sahil Sura"]}
     >
-      The NASA SL avionics team is responsible for designing, testing, and
+      The NASA SL Flight Systems team is responsible for designing, testing, and
       manufacturing all flight computers, sensors, and telemetry systems and
-      ensuring that rocket recovery systems are functional. Avionics works
+      ensuring that rocket recovery systems are functional. Flight Systems works
       closely with all teams to collect proper data for a successful flight.
       Additionally, they work closely with Recovery and Payload to assist and
       ensure the proper systems and data collection systems work for their
       needs.
+    </SubteamInfo>
+
+    <SubteamInfo
+      slot="Aerodynamics"
+      title="Aerodynamics"
+      images={[]}
+      leads={["Brady Wilson"]}
+    >
+      The Aerodynamics team is responsible for optimizing the flight of the
+      rocket through aerodynamic design and simulation.
     </SubteamInfo>
 
     <SubteamInfo
@@ -187,39 +173,13 @@ const metadata = {
           alt: "NASA SL payload",
         },
       ]}
-      lead={{
-        title: "Team Leads: ",
-        name: "Pietro Lavezzo & Brady Wilson",
-        emails: ["lavezzo.2@osu.edu", "wilson.3572@osu.edu"],
-      }}
+      leads={["Dominick Delpico", "Sai Vidyud Senthil Nathan"]}
     >
       The NASA SL payload team focuses on designing a payload that conforms to
       the competition requirements. The Payload team works to implement a
       solution to a given challenge. The payload follows a CubeSat form factor.
       Work includes design brainstorming, CAD development, software programming,
       and data analysis post-flight.
-    </SubteamInfo>
-
-    <SubteamInfo
-      slot="Safety & Recovery"
-      title="Safety & Recovery"
-      images={[
-        {
-          src: "~/assets/images/projects/nasa/safety & recovery.webp",
-          alt: "NASA SL rocket with deployed parachutes",
-        },
-      ]}
-      lead={{
-        name: "Morgan McGraw",
-        linkedins: ["https://www.linkedin.com/in/morgan-mcgraw-67a22926b"],
-        emails: ["mcgraw.168@osu.edu"],
-      }}
-    >
-      NASA SL Safety & Recovery focuses on designing and overseeing the
-      vehicle’s recovery systems. This work is vital to ensure a proper and safe
-      descent of the launch vehicle during flight. Work also includes
-      collaborating with the other subteams to ensure proper functionality of
-      recovery systems.
     </SubteamInfo>
   </MeetTheTeams>
 </Layout>

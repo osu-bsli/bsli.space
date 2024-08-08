@@ -3,14 +3,15 @@ import Socials from "./Socials.astro";
 import Image from "../common/Image.astro";
 import { type TeamMember } from "~/types";
 import { type ImageProps } from "~/utils/images-optimization";
+import getLeadershipData from "~/leadershipData";
 
 export interface Props {
-  title: string,
-  lead: TeamMember,
-  images: Array<ImageProps>,
+  title: string;
+  leads: string[];
+  images: Array<ImageProps>;
 }
 
-const { title, lead, images = [] } = Astro.props;
+const { title, leads = [], images = [] } = Astro.props;
 ---
 
 <div class="flex flex-col md:flex-row justify-center gap-8">
@@ -19,20 +20,30 @@ const { title, lead, images = [] } = Astro.props;
 
     <div class="items-end my-4">
       <h3 class="text-xl font-bold">
-        {lead.title ? lead.title : "Team Lead: "}<span class="text-primary"
-          >{lead.name}</span
-        >
+        {leads.length > 1 ? "Team Leads: " : "Team Lead: "}
+        <span class="text-primary">
+          {
+            leads.map((name) => (
+              <div>
+                {name}
+                <Socials {...getLeadershipData(name)} />
+              </div>
+            ))
+          }
+        </span>
       </h3>
-
-      <Socials {...lead} />
     </div>
 
     <div class="flex flex-col gap-4 text-lg">
-      <slot/>
+      <slot />
     </div>
   </div>
 
   <div class="flex flex-col gap-4 md:w-1/2">
-    {images.map((i) => <Image class="m-auto" widths={[400, 800]} layout="contained" {...i} />)}
+    {
+      images.map((i) => (
+        <Image class="m-auto" widths={[400, 800]} layout="contained" {...i} />
+      ))
+    }
   </div>
 </div>

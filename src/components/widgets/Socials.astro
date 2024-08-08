@@ -2,61 +2,76 @@
 import { Icon } from "astro-icon/components";
 import { twMerge } from "tailwind-merge";
 
-const {
-  linkedins = [],
-  emails = [],
-  facebooks = [],
-  youtubes = [],
-  instagrams = [],
-  classes,
-} = Astro.props;
+export interface Props {
+  linkedin?: string;
+  email?: string;
+  facebook?: string;
+  youtube?: string;
+  instagram?: string;
+  classes?: string[] | string;
+}
+
+const { linkedin, email, facebook, youtube, instagram, classes } = Astro.props;
 ---
 
 <div
-  class={twMerge("font-normal flex flex-row flex-wrap gap-x-3 my-2 text-muted", classes)}
+  class={twMerge(
+    "font-normal flex flex-row flex-wrap gap-x-3 my-2 text-muted",
+    classes,
+  )}
 >
   {
-    instagrams.map((instagram) => (
+    instagram ? (
       <a class="flex flex-row gap-1" href={instagram}>
         <Icon name="tabler:brand-instagram" class="w-8 h-8" />
         <p>Instagram</p>
       </a>
-    ))
+    ) : (
+      ""
+    )
   }
 
   {
-    linkedins.map((linkedin) => (
+    linkedin ? (
       <a class="flex flex-row gap-1" href={linkedin}>
         <Icon name="tabler:brand-linkedin" class="w-8 h-8" />
         <p>LinkedIn</p>
       </a>
-    ))
+    ) : (
+      ""
+    )
   }
 
   {
-    emails.map((email) => (
+    email ? (
       <a class="flex flex-row gap-1" href={"mailto:" + email}>
         <Icon name="tabler:mail" class="w-8 h-8" />
         <p>{email}</p>
       </a>
-    ))
+    ) : (
+      ""
+    )
   }
 
   {
-    facebooks.map((facebook) => (
+    facebook ? (
       <a class="flex flex-row gap-1" href={facebook}>
         <Icon name="tabler:brand-facebook" class="w-8 h-8" />
         <p>Facebook</p>
       </a>
-    ))
+    ) : (
+      ""
+    )
   }
 
   {
-    youtubes.map((youtube) => (
+    youtube ? (
       <a class="flex flex-row gap-1" href={youtube}>
         <Icon name="tabler:brand-youtube" class="w-8 h-8" />
         <p>YouTube</p>
       </a>
-    ))
+    ) : (
+      ""
+    )
   }
 </div>

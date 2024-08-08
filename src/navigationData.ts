@@ -1,6 +1,27 @@
+import type { CallToAction } from './types';
 import { getPermalink, getBlogPermalink, getAsset, getHomePermalink } from './utils/permalinks';
 
-export const headerData = {
+interface Link {
+  text?: string;
+  href?: string;
+  ariaLabel?: string;
+  icon?: string;
+}
+
+export interface ActionLink extends CallToAction { }
+
+export interface MenuLink extends Link {
+  text: string,
+  href?: string,
+  links?: Array<MenuLink>;
+}
+
+export interface HeaderData {
+  links: MenuLink[];
+  actions: ActionLink[]
+}
+
+export const headerData: HeaderData = {
   links: [
     {
       text: 'Home',
@@ -69,8 +90,8 @@ export const footerData = {
   ],
   sponsors2: [
     {
-      src:"~/assets/images/sponsors/OSUCOE.webp",
-      ariaLabel :"OSU College of Engineering Logo",
+      src: "~/assets/images/sponsors/OSUCOE.webp",
+      ariaLabel: "OSU College of Engineering Logo",
       href: "https://engineering.osu.edu/"
     },
     {
