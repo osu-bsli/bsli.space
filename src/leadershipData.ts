@@ -39,7 +39,7 @@ const leadershipData: LeadershipData = {
     "Marc Chow": {
         title: "Business Operations Director",
         linkedin: "https://www.linkedin.com/in/marcchow2/",
-        email: "chow.205@buckeyemail.osu.edu",
+        email: "chow.205@osu.edu",
     },
 
     /*
@@ -49,28 +49,28 @@ const leadershipData: LeadershipData = {
     "Matthew Heinzman": {
         title: "NASA Project Manager",
         linkedin: "https://www.linkedin.com/in/heinzmanm/",
-        email: "heinzman.6@buckeyemail.osu.edu",
+        email: "heinzman.6@osu.edu",
     },
     "Abby Atchley":
     {
         title: "NASA Deputy Project Manager",
         linkedin: "https://www.linkedin.com/in/abby-atchley-990831252/",
-        email: "atchley.23@buckeyemail.osu.edu",
+        email: "atchley.23@osu.edu",
     },
     "Nisha Kumar": {
         title: "NASA Deputy Project Manager",
         linkedin: "https://www.linkedin.com/in/nisha-v-kumar/",
-        email: "kumar.941@buckeyemail.osu.edu",
+        email: "kumar.941@osu.edu",
     },
     "Kennedy Swyers": {
         title: "NASA Structures Lead",
-        email: "swyers.11@buckeyemail.osu.edu",
+        email: "swyers.11@osu.edu",
         linkedin: "https://www.linkedin.com/in/kennedy-swyers-55459723a/"
     },
     "Sahil Sura": {
         title: "NASA Flight Systems Lead",
         linkedin: "https://www.linkedin.com/in/sahil-sura/",
-        email: "sura.18@buckeyemail.osu.edu",
+        email: "sura.18@osu.edu",
     },
     "Brady Wilson": {
         title: "NASA Aerodynamics Lead",
@@ -78,12 +78,12 @@ const leadershipData: LeadershipData = {
     "Dominick Delpico": {
         title: "NASA Payload Lead",
         linkedin: "https://www.linkedin.com/in/dominickdelpico/",
-        email: "delpico.57@buckeyemail.osu.edu",
+        email: "delpico.57@osu.edu",
     },
     "Sai Vidyud Senthil Nathan": {
         title: "NASA Co-Payload Lead",
         linkedin: "https://www.linkedin.com/in/sai-vidyud-senthil-nathan-b9a46a214/",
-        email: "senthilnathan.11@buckeyemail.osu.edu",
+        email: "senthilnathan.11@osu.edu",
     },
 
     /*
@@ -97,31 +97,31 @@ const leadershipData: LeadershipData = {
     "Rahul Srinivas": {
         title: "Spaceport Deputy Project Manager",
         linkedin: "https://www.linkedin.com/in/rahul-srinivas-501sw/",
-        email: "srinivas.45@buckeyemail.osu.edu",
+        email: "srinivas.45@osu.edu",
     },
     "Liam Juhas": {
         title: "Spaceport Structures Lead",
         linkedin: "https://www.linkedin.com/in/liam-juhas-a14567267/",
-        email: "juhas.9@buckeyemail.osu.edu",
+        email: "juhas.9@osu.edu",
     },
     "Toby Simpson": {
         title: "Spaceport Avionics Lead",
-        email: "simpson.900@buckeyemail.osu.edu",
+        email: "simpson.900@osu.edu",
     },
     "Jackson Nicley": {
         title: "Spaceport Aerodynamics Lead",
         linkedin: "https://www.linkedin.com/in/jackson-nicley/",
-        email: "nicley.6@buckeyemail.osu.edu",
+        email: "nicley.6@osu.edu",
     },
     "Calvin Beall": {
         title: "Spaceport Recovery Lead",
         linkedin: "https://www.linkedin.com/in/calvin-beall-a10128261/",
-        email: "beall.67@buckeyemail.osu.edu",
+        email: "beall.67@osu.edu",
     },
     "Hanshu Kotta": {
         title: "Spaceport Payload Lead",
         linkedin: "https://www.linkedin.com/in/hanshu-kotta-73a979235/",
-        email: "kotta.4@buckeyemail.osu.edu",
+        email: "kotta.4@osu.edu",
     },
     "Matthew Geiger": {
         title: "Spaceport Propulsion Lead",
@@ -147,15 +147,15 @@ const leadershipData: LeadershipData = {
     "Zafar Shaik": {
         title: "Liquids Fluids Lead",
         linkedin: "https://www.linkedin.com/in/zafarshaik/",
-        email: "shaik.27@buckeyemail.osu.edu",
+        email: "shaik.27@osu.edu",
     },
     "Julian Hooks": {
         title: "Liquids Electronics Lead",
         linkedin: "https://www.linkedin.com/in/julian-hooks-56912b291/",
-        email: "hooks.82@buckeyemail.osu.edu",
+        email: "hooks.82@osu.edu",
     },
     "Ray Saracene": {
         title: "Liquids Test Director",
-        email: "saracene.1@buckeyemail.osu.edu",
+        email: "saracene.1@osu.edu",
     },
 }
