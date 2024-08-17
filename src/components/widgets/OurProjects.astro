@@ -21,15 +21,15 @@ const {
 
 <WidgetWrapper id={id} isDark={isDark} containerClass={classes?.container as string} bg={bg}>
   <div class="p=4">
-    <h2 class="text-4xl md:text-5xl font-bold tracking-tighter text-center font-heading">{title}</h2>
-    <p class="text-lg text-center mt-8" set:html={subtitle}></p>
+    <h2 class="text-4xl md:text-5xl font-bold font-heading tracking-tighter text-center">{title}</h2>
+    <div class="text-center my-4" set:html={subtitle}></div>
 
     <div class="flex flex-col lg:justify-between lg:flex-row mb-8 gap-8">
       {
         items.map(({ image, name, description, href, meetingTimes, meetingInfo}) => (
           <div class="flex flex-col my-4">
             <Image
-              class="mx-auto w-full rounded-lg bg-gray-500 shadow-lg mb-4 mt-8"
+              class="mx-auto w-full rounded-lg bg-gray-500 shadow-lg"
               width="auto"
               height="960px"
               widths={[800, 1600]}
@@ -37,8 +37,8 @@ const {
               layout="responsive"
               {...image}
             />
-            <h3 class="text-xl font-bold">{name}</h3>
-            <p class="mt-4">{description}</p>
+            <h3 class="text-xl font-bold font-heading pb-2 py-7">{name}</h3>
+            <p class="">{description}</p>
 
             <h3 class="text-large font-bold my-4">Meeting Times</h3>
 
