@@ -1,6 +1,7 @@
 ---
 import { Icon } from "astro-icon/components";
 import { twMerge } from "tailwind-merge";
+import SocialLink from "./SocialLink.astro";
 
 export interface Props {
   linkedin?: string;
@@ -9,23 +10,22 @@ export interface Props {
   youtube?: string;
   instagram?: string;
   classes?: string[] | string;
+  useButtonStyle?: boolean;
 }
 
-const { linkedin, email, facebook, youtube, instagram, classes } = Astro.props;
+const { linkedin, email, facebook, youtube, instagram, classes, useButtonStyle } = Astro.props;
 ---
 
 <div
   class={twMerge(
     "font-normal flex flex-row flex-wrap gap-x-3 my-2 text-muted",
+    useButtonStyle ? "gap-y-3" : "",
     classes,
   )}
 >
   {
     instagram ? (
-      <a class="flex flex-row gap-1" href={instagram}>
-        <Icon name="tabler:brand-instagram" class="w-8 h-8" />
-        <p>Instagram</p>
-      </a>
+      <SocialLink icon="tabler:brand-instagram" href={instagram} label="Instagram" useButtonStyle={useButtonStyle} />
     ) : (
       ""
     )
@@ -33,10 +33,7 @@ const { linkedin, email, facebook, youtube, instagram, classes } = Astro.props;
 
   {
     linkedin ? (
-      <a class="flex flex-row gap-1" href={linkedin}>
-        <Icon name="tabler:brand-linkedin" class="w-8 h-8" />
-        <p>LinkedIn</p>
-      </a>
+      <SocialLink icon="tabler:brand-linkedin" href={linkedin} label="LinkedIn" useButtonStyle={useButtonStyle} />
     ) : (
       ""
     )
@@ -44,10 +41,7 @@ const { linkedin, email, facebook, youtube, instagram, classes } = Astro.props;
 
   {
     email ? (
-      <a class="flex flex-row gap-1" href={"mailto:" + email}>
-        <Icon name="tabler:mail" class="w-8 h-8" />
-        <p>{email}</p>
-      </a>
+      <SocialLink icon="tabler:mail" href={"mailto: " + email} label={email} useButtonStyle={useButtonStyle} />
     ) : (
       ""
     )
@@ -55,10 +49,7 @@ const { linkedin, email, facebook, youtube, instagram, classes } = Astro.props;
 
   {
     facebook ? (
-      <a class="flex flex-row gap-1" href={facebook}>
-        <Icon name="tabler:brand-facebook" class="w-8 h-8" />
-        <p>Facebook</p>
-      </a>
+      <SocialLink icon="tabler:brand-facebook" href={facebook} label="Facebook" useButtonStyle={useButtonStyle} />
     ) : (
       ""
     )
@@ -66,10 +57,7 @@ const { linkedin, email, facebook, youtube, instagram, classes } = Astro.props;
 
   {
     youtube ? (
-      <a class="flex flex-row gap-1" href={youtube}>
-        <Icon name="tabler:brand-youtube" class="w-8 h-8" />
-        <p>YouTube</p>
-      </a>
+      <SocialLink icon="tabler:brand-youtube" href={youtube} label="YouTube" useButtonStyle={useButtonStyle} />
     ) : (
       ""
     )

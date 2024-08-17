@@ -31,7 +31,7 @@ const title = "Contact us";
           <p>
             Email us at:
             <div class="flex justify-center">
-              <Socials classes="text-primary" email="eng-buckeyesli@osu.edu" />
+              <Socials useButtonStyle classes="text-primary" email="eng-buckeyesli@osu.edu" />
             </div>
           </p>
         </div>
@@ -40,10 +40,7 @@ const title = "Contact us";
           <h2 class="font-bold">Leadership/Project Inquiries</h2>
           <p>
             Find the right person on our
-            <u
-              ><a href={getPermalink("/leadership")} class="link">Leadership</a
-              ></u
-            >
+            <u><a href={getPermalink("/leadership")} class="link">Leadership</a></u>
             page.
           </p>
         </div>
@@ -53,11 +50,13 @@ const title = "Contact us";
           <p>Check out one of our social media pages!</p>
           <div class="flex justify-center">
             <Socials
+              useButtonStyle
+
               linkedin="https://www.linkedin.com/company/the-buckeye-space-launch-initiative/"
               facebook="https://www.facebook.com/spacelaunchinitiative/"
               youtube="https://www.youtube.com/@buckeyesli1865/videos"
               instagram="https://www.instagram.com/buckeye_sli/"
-              classes="text-primary"
+              classes="text-primary justify-center"
             />
           </div>
         </div>
