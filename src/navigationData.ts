@@ -57,7 +57,7 @@ export const headerData: HeaderData = {
       href: getPermalink('/contact'),
     },
   ],
-  actions: [{ variant: 'primary', text: 'JOIN', href: getHomePermalink() + '#get-involved' }],
+  actions: [{ variant: 'primary', text: 'JOIN 🚀', href: getHomePermalink() + '#get-involved' }],
 };
 
 export const footerData = {
