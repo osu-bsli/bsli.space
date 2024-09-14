@@ -29,9 +29,9 @@ for (let { sectionShort, sectionId } of leadershipPageLayout) {
     leadershipPageLayout.map(({ section, sectionId, staff }) => (
       <WidgetWrapper containerClass={`max-w-6xl`}`>
         <div id={sectionId}>
-          <Headline title={section} classes={{ title: "text-primary" }} />
+          <h2 class="text-primary text-3xl text-center font-bold mb-4">{section}</h2>
 
-          <div class="flex flex-wrap items-center justify-center gap-4">
+          <div class="flex flex-wrap items-stretch justify-center gap-4">
             {staff.map((name) => (
               <StaffCard name={name} />
             ))}

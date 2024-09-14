@@ -1,3 +1,4 @@
+// @ts-ignore TSC doesn't know that we have a Vite plugin for csv
 import staffData from "./staffData.csv";
 
 export interface StaffData {

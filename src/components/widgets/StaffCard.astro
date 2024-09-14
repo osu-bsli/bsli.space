@@ -31,34 +31,32 @@ function getImagePath(name) {
 let imagePath = getImagePath(name);
 if (getImagePath(name) == null) {
     imagePath = getImagePath("unknown");
-    
-//     throw new Error(
-//         `Staff image not found for ${name} in ${basePath}
 
-// Images considered:
-// ${Object.keys(images).join("\n")}
-//     `,
-//     );
+    //     throw new Error(
+    //         `Staff image not found for ${name} in ${basePath}
+
+    // Images considered:
+    // ${Object.keys(images).join("\n")}
+    //     `,
+    //     );
 }
 
 const image = images[imagePath]();
 ---
 
-<div class="inline-block">
-    <div
-        class="border border-[#ffffff29] bg-page rounded-md p-4 flex flex-col gap-4 shadow-lg m-auto"
-    >
-        <Image class="rounded-sm" src={image} alt={name} width="400" />
-        <div>
-            <p class="text-primary font-bold text-xl">{name}</p>
-            <p class="font-bold">{leadershipData.title}</p>
+<div
+    class="border border-[#ffffff29] bg-page rounded-md p-4 flex flex-col gap-4 shadow-lg"
+>
+    <Image class="rounded-sm" src={image} alt={name} width="400" />
+    <div>
+        <p class="text-primary font-bold text-xl">{name}</p>
+        <p class="font-bold">{leadershipData.title}</p>
 
-            <div class="py-4">
-                {leadershipData.year && <p>{leadershipData.year}</p>}
-                {leadershipData.major && <p>{leadershipData.major}</p>}
-            </div>
-
-            {!noSocials && <Socials {...getStaffRecord(name)} />}
+        <div class="py-4">
+            {leadershipData.year && <p>{leadershipData.year}</p>}
+            {leadershipData.major && <p>{leadershipData.major}</p>}
         </div>
+
+        {!noSocials && <Socials {...getStaffRecord(name)} />}
     </div>
 </div>
