@@ -45,11 +45,11 @@ const {
             />
           )
         }
-        <div class="max-w-3xl mx-auto">
+        <div class="max-w-7xl mx-auto">
           {subtitle && <p class="text-xl mb-6" set:html={subtitle} />}
           {
             actions && (
-              <div class="max-w-mdt sm:max-w-lg m-auto flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-4">
+              <div class="max-w-3xl m-auto flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-4">
                 {Array.isArray(actions) ? (
                   actions.map((action) => (
                     <div class="flex w-full sm:w-auto">

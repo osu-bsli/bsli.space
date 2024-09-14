@@ -1,5 +1,5 @@
 ---
-import getLeadershipData from "~/leadershipData";
+import getStaffRecord from "~/staffData"
 import Socials from "./Socials.astro";
 
 export interface Props {
@@ -13,5 +13,5 @@ const { title, name } = Astro.props;
 <div class="">
   <h2 class="text-xl font-bold">{title}</h2>
   <h2 class="text-xl font-bold text-primary">{name}</h2>
-  <Socials {...getLeadershipData(name)}/>
+  <Socials {...getStaffRecord(name)}/>
 </tr>

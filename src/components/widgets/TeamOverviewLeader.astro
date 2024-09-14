@@ -1,5 +1,5 @@
 ---
-import getLeadershipData from "~/leadershipData";
+import getStaffRecord from "~/staffData";
 import Socials from "./Socials.astro";
 
 export interface Props {
@@ -17,7 +17,7 @@ const { title, people = [] } = Astro.props;
       people.map((name) => (
         <div class="flex flex-col items-end">
           {name}
-          <Socials classes={["flex-col items-end justify-end"]} {...getLeadershipData(name)}/>
+          <Socials classes={["flex-col items-end justify-end"]} {...getStaffRecord(name)}/>
         </div>
       ))
     }

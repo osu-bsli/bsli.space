@@ -1,7 +1,8 @@
 ---
-import getLeadershipData from "~/leadershipData";
+import getStaffRecord from "~/staffData";
 import { Image } from "astro:assets";
 import Socials from "./Socials.astro";
+import { Logger } from "node_modules/astro/dist/core/logger/core";
 
 export interface Props {
     name: string;
@@ -10,16 +11,43 @@ export interface Props {
 
 const { name, noSocials } = Astro.props;
 
-let leadershipData = getLeadershipData(name);
+const basePath = "/src/assets/images/staff/";
+let leadershipData = getStaffRecord(name);
 const images = import.meta.glob<{ default: ImageMetadata }>(
-    "/src/assets/images/staff/*.{jpeg,jpg,png}",
+    "/src/assets/images/staff/*.{jpeg,jpg,png,webp}",
 );
-const imagePath = "/src/assets/images/staff/" + name + ".png";
+
+function getImagePath(name) {
+    let imagePath;
+    for (let i in images) {
+        if (i.startsWith(basePath + name)) {
+            imagePath = i;
+        }
+    }
+
+    return imagePath;
+}
+
+let imagePath = getImagePath(name);
+if (getImagePath(name) == null) {
+    imagePath = getImagePath("unknown");
+    
+//     throw new Error(
+//         `Staff image not found for ${name} in ${basePath}
+
+// Images considered:
+// ${Object.keys(images).join("\n")}
+//     `,
+//     );
+}
+
 const image = images[imagePath]();
 ---
 
 <div class="inline-block">
-    <div class="border border-[#ffffff29] bg-page rounded-md p-4 flex flex-col gap-4 shadow-lg m-auto">
+    <div
+        class="border border-[#ffffff29] bg-page rounded-md p-4 flex flex-col gap-4 shadow-lg m-auto"
+    >
         <Image class="rounded-sm" src={image} alt={name} width="400" />
         <div>
             <p class="text-primary font-bold text-xl">{name}</p>
@@ -30,7 +58,7 @@ const image = images[imagePath]();
                 {leadershipData.major && <p>{leadershipData.major}</p>}
             </div>
 
-            {!noSocials && <Socials {...getLeadershipData(name)} />}
+            {!noSocials && <Socials {...getStaffRecord(name)} />}
         </div>
     </div>
 </div>

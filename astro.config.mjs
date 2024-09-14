@@ -17,6 +17,7 @@ import {
   responsiveTablesRehypePlugin,
   lazyImagesRehypePlugin,
 } from './src/utils/frontmatter.mjs';
+import dsv from '@rollup/plugin-dsv';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -90,5 +91,8 @@ export default defineConfig({
         '~': path.resolve(__dirname, './src'),
       },
     },
+    plugins: [
+      dsv(),
+    ]
   },
 });

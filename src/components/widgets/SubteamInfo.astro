@@ -3,7 +3,7 @@ import Socials from "./Socials.astro";
 import Image from "../common/Image.astro";
 import { type TeamMember } from "~/types";
 import { type ImageProps } from "~/utils/images-optimization";
-import getLeadershipData from "~/leadershipData";
+import getStaffRecord from "~/staffData";
 
 export interface Props {
   title: string;
@@ -26,7 +26,7 @@ const { title, leads = [], images = [] } = Astro.props;
             leads.map((name) => (
               <div>
                 {name}
-                <Socials {...getLeadershipData(name)} />
+                <Socials {...getStaffRecord(name)} />
               </div>
             ))
           }

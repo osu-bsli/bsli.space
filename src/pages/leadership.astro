@@ -1,18 +1,47 @@
 ---
+import Headline from "~/components/ui/Headline.astro";
+import WidgetWrapper from "~/components/ui/WidgetWrapper.astro";
 import Hero from "~/components/widgets/Hero.astro";
 import Layout from "~/layouts/PageLayout.astro";
+import StaffCard from "~/components/widgets/StaffCard.astro";
+
+import { leadershipPageLayout } from "~/staffData";
 
 const title = "Leadership";
+
+const heroActions: { text: string; href: string }[] = [];
+
+for (let { sectionShort, sectionId } of leadershipPageLayout) {
+  heroActions.push({
+    text: sectionShort,
+    href: "#" + sectionId,
+  });
+}
 ---
 
 <Layout metadata={{ title }}>
-  <Hero
-    tagline="UNDER CONSTRUCTION"
-  >
-    <Fragment slot="title">This page will be available soon.</Fragment>
-
-    <Fragment slot="subtitle">
-      We are still in the process of transitioning BSLI to new leadership. Check back soon!
-    </Fragment>
+  <Hero tagline="2023-2024 Academic Year" actions={heroActions}>
+    <Fragment slot="title">BSLI Leadership Team</Fragment>
+    <Fragment slot="subtitle">&nbsp;</Fragment>
   </Hero>
+
+  {
+    leadershipPageLayout.map(({ section, sectionId, staff }) => (
+      <WidgetWrapper containerClass={`max-w-6xl`}`>
+        <div id={sectionId}>
+          <Headline title={section} classes={{ title: "text-primary" }} />
+
+          <div class="flex flex-wrap items-center justify-center gap-4">
+            {staff.map((name) => (
+              <StaffCard name={name} />
+            ))}
+          </div>
+        </div>
+
+        <Fragment slot="bg">
+          <div class="absolute inset-0 bg-gray-50 dark:bg-transparent" />
+        </Fragment>
+      </WidgetWrapper>
+    ))
+  }
 </Layout>
