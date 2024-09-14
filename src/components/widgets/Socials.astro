@@ -18,48 +18,33 @@ const { linkedin, email, facebook, youtube, instagram, classes, useButtonStyle }
 
 <div
   class={twMerge(
-    "font-normal flex flex-row flex-wrap gap-x-3 my-2 text-muted",
+    "font-normal flex flex-row flex-wrap gap-x-3 mt-2 text-muted",
     useButtonStyle ? "gap-y-3" : "",
     classes,
   )}
 >
   {
-    instagram ? (
+    instagram &&
       <SocialLink icon="tabler:brand-instagram" href={instagram} label="Instagram" useButtonStyle={useButtonStyle} />
-    ) : (
-      ""
-    )
   }
 
   {
-    linkedin ? (
+    linkedin &&
       <SocialLink icon="tabler:brand-linkedin" href={linkedin} label="LinkedIn" useButtonStyle={useButtonStyle} />
-    ) : (
-      ""
-    )
   }
 
   {
-    email ? (
+    email &&
       <SocialLink icon="tabler:mail" href={"mailto: " + email} label={email} useButtonStyle={useButtonStyle} />
-    ) : (
-      ""
-    )
   }
 
   {
-    facebook ? (
+    facebook &&
       <SocialLink icon="tabler:brand-facebook" href={facebook} label="Facebook" useButtonStyle={useButtonStyle} />
-    ) : (
-      ""
-    )
   }
 
   {
-    youtube ? (
+    youtube &&
       <SocialLink icon="tabler:brand-youtube" href={youtube} label="YouTube" useButtonStyle={useButtonStyle} />
-    ) : (
-      ""
-    )
   }
 </div>

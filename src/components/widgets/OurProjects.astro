@@ -1,48 +1,58 @@
 ---
-import Image from '~/components/common/Image.astro';
+import {Image} from 'astro:assets';
 
 import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
 import Button from '../ui/Button.astro';
 
+export interface Props {
+  title: string,
+  subtitle?: any,
+
+  items: Array<{
+    name: string,
+    description: string,
+    href: string,
+    image: {
+      src: Promise<any>,
+      alt: string,
+    },
+    meetingTimes :Array<{
+      day: string,
+      time: string,
+    }>,
+  }>
+
+  id: string,
+}
+
 const {
   title = await Astro.slots.render('title'),
   subtitle = await Astro.slots.render('subtitle'),
-
   items = [],
 
-  tagline,
-
   id,
-  isDark = false,
-  classes = {},
-  bg = await Astro.slots.render('bg'),
 } = Astro.props;
 ---
 
-<WidgetWrapper id={id} isDark={isDark} containerClass={classes?.container as string} bg={bg}>
+<WidgetWrapper id={id}>
   <div class="p=4">
     <h2 class="text-4xl md:text-5xl font-bold font-heading tracking-tighter text-center">{title}</h2>
     <div class="text-center my-4" set:html={subtitle}></div>
 
     <div class="flex flex-col lg:justify-between lg:flex-row mb-8 gap-8">
       {
-        items.map(({ image, name, description, href, meetingTimes, meetingInfo}) => (
-          <div class="flex flex-col my-4">
+        items.map(({ image, name, description, href, meetingTimes}) => (
+          <div class="flex flex-col my-4 basis-1/3">
             <Image
-              class="mx-auto w-full rounded-lg bg-gray-500 shadow-lg"
-              width="auto"
-              height="960px"
-              widths={[800, 1600]}
-              sizes="(max-width: 768px) 100vw, 432px"
-              layout="responsive"
-              {...image}
+              class="mx-auto w-full rounded-lg bg-gray-500 shadow h-64 object-cover"
+              src={image.src}
+              alt={image.alt}
+              widths={[200, 400, 800]}
             />
             <h3 class="text-xl font-bold font-heading pb-2 py-7">{name}</h3>
             <p class="">{description}</p>
 
             <h3 class="text-large font-bold my-4">Meeting Times 🕒</h3>
-
-            <p>{meetingInfo}</p>
 
             {
               meetingTimes.map(({day, time}) => (

@@ -6,6 +6,8 @@ export interface LeadershipRecord {
     title: string;
     linkedin?: string;
     email?: string;
+    year?: string;
+    major?: string;
 }
 
 export default function getLeadershipData(name: string): LeadershipRecord {
@@ -34,7 +36,9 @@ const leadershipData: LeadershipData = {
     "Hana Winchester": {
         title: "Sponsorship Chair",
         linkedin: "https://www.linkedin.com/in/hana-winchester-988282258/",
-        email: "winchester.36@osu.edu"
+        email: "winchester.36@osu.edu",
+        year: "Sophomore",
+        major: "Computer Science & Engineering"
     },
     "Marc Chow": {
         title: "Business Operations Director",
