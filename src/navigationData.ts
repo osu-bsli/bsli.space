@@ -108,6 +108,6 @@ export const footerData = {
     { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/osu-bsli' },
   ],
   footNote: `
-    © 2024 Buckeye Space Launch Initiative</a> · All rights reserved.
+    © 2024 Buckeye Space Launch Initiative</a> · Website designed by Brian Jia (jia.659@buckeyemail.osu.edu).
   `,
 };
