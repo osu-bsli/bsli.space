@@ -11,7 +11,7 @@ export interface Props {
 const { icon, label, href, useButtonStyle } = Astro.props;
 ---
 
-<a class:list={useButtonStyle ? ["flex-row gap-1 inline-flex items-center justify-center rounded-full border-gray-400 border bg-transparent font-medium text-center text-base text-page leading-snug transition py-1.5 px-3 md:px-6 ease-in duration-200 focus:ring-blue-500 focus:ring-offset-blue-200 focus:ring-2 focus:ring-offset-2 hover:bg-gray-100 hover:border-gray-600 dark:text-slate-300 dark:border-slate-500 dark:hover:bg-slate-800 dark:hover:border-slate-800"] : ["flex flex-row gap-1"]} href={href}>
+<a class={useButtonStyle ? "social-btn" : "flex flex-row gap-1"} href={href}>
     <Icon name={icon} class="w-7 h-7" />
     <p>{label}</p>
 </a>

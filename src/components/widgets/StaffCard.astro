@@ -3,13 +3,15 @@ import getStaffRecord from "~/staffData";
 import { Image } from "astro:assets";
 import Socials from "./Socials.astro";
 import { Logger } from "node_modules/astro/dist/core/logger/core";
+import { twMerge } from "tailwind-merge";
 
 export interface Props {
     name: string;
     noSocials?: boolean;
+    forceAspectRatio?: boolean,
 }
 
-const { name, noSocials } = Astro.props;
+const { name, noSocials, forceAspectRatio } = Astro.props;
 
 const basePath = "/src/assets/images/staff/";
 let leadershipData = getStaffRecord(name);
@@ -39,7 +41,7 @@ const image = images[imagePath]();
 <div
     class="border border-[#ffffff29] bg-page rounded-md p-4 flex flex-col gap-4 shadow-lg max-w-80"
 >
-    <Image class="rounded-sm aspect-[3/2] object-cover" src={image} alt={name} width=400 widths={[400, 800]} />
+    <Image class={twMerge("rounded-sm object-cover", forceAspectRatio && "aspect-[3/2]")} src={image} alt={name} width=400 widths={[400, 800]} />
     <div>
         <p class="text-primary font-bold text-xl">{name}</p>
         <p class="font-bold">{leadershipData.title}</p>
