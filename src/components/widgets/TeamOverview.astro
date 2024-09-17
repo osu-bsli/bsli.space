@@ -1,5 +1,5 @@
 ---
-import Image from "~/components/common/Image.astro";
+import { Image } from "astro:assets";
 import { type ImageProps } from "~/utils/images-optimization";
 
 interface Stat {
@@ -10,7 +10,7 @@ interface Stat {
 export interface Props {
   title: string;
   stats: Stat[];
-  image: ImageProps;
+  image: {src: Promise<any>, alt: string};
 }
 
 const { title, stats = [], image } = Astro.props;
@@ -44,5 +44,5 @@ const { title, stats = [], image } = Astro.props;
     </table>
   </div>
 
-  <Image {...image} class="m-auto object-contain w-1/2 max-h-screen" layout="custom"/>
+  <Image {...image} class="m-auto object-contain w-1/2 max-h-[800px]"/>
 </div>

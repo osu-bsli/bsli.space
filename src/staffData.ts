@@ -1,6 +1,8 @@
 // @ts-ignore TSC doesn't know that we have a Vite plugin for csv
 import staffData from "./staffData.csv";
 
+
+
 export interface StaffData {
     [name: string]: StaffRecord;
 }
@@ -28,16 +30,6 @@ export default function getStaffRecord(name: string): StaffRecord {
     let record = staffData.find(e => e["name"] == name);
 
     if (!record) throw new Error("No staff record found for " + name);
-
-    // Check if email contains last name
-    let lastName = name.split(' ').at(-1)?.toLowerCase();
-    if (lastName) {
-        if (record.email) {
-            if (!record.email.toLowerCase().includes(lastName)) {
-                throw new Error(name);
-            }
-        }
-    }
 
     return record;
 }

@@ -31,32 +31,24 @@ function getImagePath(name) {
 let imagePath = getImagePath(name);
 if (getImagePath(name) == null) {
     imagePath = getImagePath("unknown");
-
-    //     throw new Error(
-    //         `Staff image not found for ${name} in ${basePath}
-
-    // Images considered:
-    // ${Object.keys(images).join("\n")}
-    //     `,
-    //     );
 }
 
 const image = images[imagePath]();
 ---
 
 <div
-    class="border border-[#ffffff29] bg-page rounded-md p-4 flex flex-col gap-4 shadow-lg"
+    class="border border-[#ffffff29] bg-page rounded-md p-4 flex flex-col gap-4 shadow-lg max-w-80"
 >
-    <Image class="rounded-sm" src={image} alt={name} width="400" />
+    <Image class="rounded-sm aspect-[3/2] object-cover" src={image} alt={name} width=400 widths={[400, 800]} />
     <div>
         <p class="text-primary font-bold text-xl">{name}</p>
         <p class="font-bold">{leadershipData.title}</p>
 
         <div class="py-4">
-            {leadershipData.year && <p>{leadershipData.year}</p>}
-            {leadershipData.major && <p>{leadershipData.major}</p>}
+            <p>{leadershipData.major || <span>&nbsp;</span>}</p>
+            <p>{leadershipData.year || <span>&nbsp;</span>}</p>
         </div>
 
-        {!noSocials && <Socials {...getStaffRecord(name)} />}
+        {!noSocials && <Socials vertical {...getStaffRecord(name)} />}
     </div>
 </div>

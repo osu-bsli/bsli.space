@@ -1,35 +1,39 @@
-title,name,year,major,email,linkedin
-President,Lauren Clar,Senior,Computer Science and Engineering,,https://www.linkedin.com/in/lauren-clar-b4b357227
-Vice President,Elhan Majed,Sophomore,Mechanical Engineering ,,https://www.linkedin.com/in/elhan-majed-23a215283/
-Former Vice President,Alex Echanove,Graduate Student,Computer Science and Engineering,,https://www.linkedin.com/in/alejandro-echanove-8a456314a/
-Communications Director,Vacant Communications Director,,,,
-Finance Director,Youssef Erraki,,,,https://www.linkedin.com/in/youssef-erraki-50340a2a0/
-Business Ops Director,Marc Chow,,,chow.205@osu.edu,https://www.linkedin.com/in/marcchow2/
-Community Outreach Chair,Waleed Chaudhary,,,,
-Recruitment & Involvement Chair,Junchen Wu,Sophomore,,,https://www.linkedin.com/in/junchen-wu-35215924b/
-Alumni & Sponsorship Chair,Hana Winchester,Sophomore,Computer Science and Engineering,,https://www.linkedin.com/in/hana-winchester-988282258/
-Merchandise Chair,Grayson Ullman,,,,
-Social Media Chair,Anastasia Anikina,,,,https://www.linkedin.com/in/anistanika/
-Webmaster,Brian Jia,Sophomore,Electrical and Computer Engineering,jia.659@osu.edu,https://www.linkedin.com/in/brian-jia-411629225/
-NASA Project Manager,Matthew Heinzman,Senior,Aerospace Engineering ,heinzman.6@osu.edu,https://www.linkedin.com/in/heinzmanm/
-NASA Deputy Project Manager,Abby Atchley,Senior,Computer Science and Engineering ,atchley.23@osu.edu,https://www.linkedin.com/in/abby-atchley-990831252/
-NASA Deputy Project Manager,Nisha Kumar,Senior,Aerospace Engineering ,kumar.941@osu.edu,https://www.linkedin.com/in/nisha-v-kumar/
-NASA Structures Lead ,Kennedy Swyers,Sophomore ,Aerospace Engineering ,swyers.11@osu.edu,https://www.linkedin.com/in/kennedy-swyers-55459723a/
-NASA Flight Systems Lead,Sahil Sura,Junior ,Mechanical Engineering ,sura.18@osu.edu,https://www.linkedin.com/in/sahil-sura/
-NASA Aerodynamics Lead,Brady Wilson,Senior,Aerospace Engineering ,,https://www.linkedin.com/in/brady-wilson-6ab002195/
-NASA Payload Lead,Dominick Delpico,Senior,Aerospace Engineering ,delpico.57@osu.edu,https://www.linkedin.com/in/dominickdelpico/
-NASA Co-Payload Lead,Sai Vidyud Senthil Nathan,Junior ,Aerospace Engineering ,senthilnathan.11@osu.edu,https://www.linkedin.com/in/sai-vidyud-senthil-nathan-b9a46a214/
-Spaceport Project Manager,Cameron Burford,,,,https://www.linkedin.com/in/cameron-burford/
-Spaceport Deputy Project Manager,Rahul Srinivas,,,srinivas.45@osu.edu,https://www.linkedin.com/in/rahul-srinivas-501sw/
-Spaceport Structures Lead,Liam Juhas,,,juhas.9@osu.edu,https://www.linkedin.com/in/liam-juhas-a14567267/
-Spaceport Avionics Lead,Toby Simpson,,,simpson.900@osu.edu,
-Spaceport Aerodynamics Lead,Jackson Nicley,,,nicley.6@osu.edu,https://www.linkedin.com/in/jackson-nicley/
-Spaceport Recovery Lead,Calvin Beall,,,beall.67@osu.edu,https://www.linkedin.com/in/calvin-beall-a10128261/
-Spaceport Payload Lead,Hanshu Kotta,Junior ,Aerospace Engineering ,kotta.4@osu.edu,https://www.linkedin.com/in/hanshu-kotta-73a979235/
-Spaceport Propulsion Lead,Matthew Geiger,,,,https://www.linkedin.com/in/mdg25/
-Liquids Project Manager,Zach Campbell,,,,https://www.linkedin.com/in/zach-campbell-8bb08b244/
-Liquids Deputy Project Manager,Miguel Abando,,,,https://www.linkedin.com/in/miguel-antonio-abando-593533252/
-Liquids Propulsion Lead,Thomas Yu,,,,https://www.linkedin.com/in/thomas-yu-0b8b5a28a/
-Liquids Fluids Lead,Zafar Shaik,,,shaik.27@osu.edu,https://www.linkedin.com/in/zafarshaik/
-Liquids DAQ/GSE Lead,Julian Hooks,,,hooks.82@osu.edu,https://www.linkedin.com/in/julian-hooks-56912b291/
-Liquids Test Director,Ray Saracene,,,saracene.1@osu.edu,
+title,name,year,major,email,linkedin,
+President,Lauren Clar,Senior,Computer Science & Engineering,clar.6@osu.edu,https://www.linkedin.com/in/lauren-clar-b4b357227,
+Vice President,Elhan Majed,Sophomore,Mechanical Engineering ,majed.2@osu.edu,https://www.linkedin.com/in/elhan-majed-23a215283/,
+Former Vice President,Alex Echanove,Graduate Student,Industrial & Systems Engineering,echanove.1@osu.edu,https://www.linkedin.com/in/alejandro-echanove-8a456314a/,
+Communications Director,Vacant Communications Director,,,,,
+Finance Director,Youssef Erraki,,Aerospace Engineering,erraki.2@osu.edu,https://www.linkedin.com/in/youssef-erraki-50340a2a0/,
+Business Ops Director,Marc Chow,,Aerospace Engineering,chow.205@osu.edu,https://www.linkedin.com/in/marcchow2/,
+,,,,,,
+Community Outreach Chair,Waleed Chaudhary,Senior,Aerospace Engineering ,jamshaid.3@osu.edu,https://www.linkedin.com/in/waleed-j/,
+Recruitment & Involvement Chair,Junchen Wu,Sophomore,Computer Science & Engineering,wu.5837@osu.edu,https://www.linkedin.com/in/junchen-wu-35215924b/,
+Alumni & Sponsorship Chair,Hana Winchester,Sophomore,Computer Science & Engineering,winchester.36@osu.edu,https://www.linkedin.com/in/hana-winchester-988282258/,
+Merchandise Chair,Grayson Ullman,,Electrical & Computer Engineering,ullman.50@osu.edu,,
+Social Media Chair,Anastasia Anikina,,Aerospace Engineering ,anikina.2@osu.edu,https://www.linkedin.com/in/anistanika/,
+Webmaster,Brian Jia,Sophomore,Electrical & Computer Engineering,jia.659@osu.edu,https://www.linkedin.com/in/brian-jia-411629225/,
+,,,,,,
+NASA Project Manager,Matthew Heinzman,Senior,Aerospace Engineering ,heinzman.6@osu.edu,https://www.linkedin.com/in/heinzmanm/,
+NASA Deputy Project Manager,Abby Atchley,Senior,Computer Science & Engineering,atchley.23@osu.edu,https://www.linkedin.com/in/abby-atchley-990831252/,
+NASA Deputy Project Manager,Nisha Kumar,Senior,Aerospace Engineering ,kumar.941@osu.edu,https://www.linkedin.com/in/nisha-v-kumar/,
+NASA Structures Lead ,Kennedy Swyers,Sophomore ,Aerospace Engineering ,swyers.11@osu.edu,https://www.linkedin.com/in/kennedy-swyers-55459723a/,
+NASA Flight Systems Lead,Sahil Sura,Junior ,Mechanical Engineering ,sura.18@osu.edu,https://www.linkedin.com/in/sahil-sura/,
+NASA Aerodynamics Lead,Brady Wilson,Senior,Aerospace Engineering ,wilson.3572@osu.edu,https://www.linkedin.com/in/brady-wilson-6ab002195/,
+NASA Payload Lead,Dominick Delpico,Senior,Aerospace Engineering ,delpico.57@osu.edu,https://www.linkedin.com/in/dominickdelpico/,
+NASA Co-Payload Lead,Sai Vidyud Senthil Nathan,Junior ,Aerospace Engineering ,senthilnathan.11@osu.edu,https://www.linkedin.com/in/sai-vidyud-senthil-nathan-b9a46a214/,
+,,,,,,
+Spaceport Project Manager,Cameron Burford,Junior ,Aerospace Engineering ,burford.28@osu.edu,https://www.linkedin.com/in/cameron-burford/,
+Spaceport Deputy Project Manager,Rahul Srinivas,,Mechanical Engineering,srinivas.45@osu.edu,https://www.linkedin.com/in/rahul-srinivas-501sw/,
+Spaceport Structures Lead,Liam Juhas,,Mechanical Engineering,juhas.9@osu.edu,https://www.linkedin.com/in/liam-juhas-a14567267/,
+Spaceport Avionics Lead,Toby Simpson,,Computer Science & Engineering,simpson.900@osu.edu,,
+Spaceport Aerodynamics Lead,Jackson Nicley,,Aerospace Engineering ,nicley.6@osu.edu,https://www.linkedin.com/in/jackson-nicley/,
+Spaceport Recovery Lead,Calvin Beall,,Engineering Physics,beall.67@osu.edu,https://www.linkedin.com/in/calvin-beall-a10128261/,
+Spaceport Payload Lead,Hanshu Kotta,Junior ,Aerospace Engineering ,kotta.4@osu.edu,https://www.linkedin.com/in/hanshu-kotta-73a979235/,
+Spaceport Propulsion Lead,Matthew Geiger,Senior,Aerospace Engineering ,geiger.346@osu.edu,https://www.linkedin.com/in/mdg25/,
+,,,,,,
+Liquids Project Manager,Zach Campbell,,Aerospace Engineering ,,https://www.linkedin.com/in/zach-campbell-8bb08b244/,
+Liquids Deputy Project Manager,Miguel Abando,,Aerospace Engineering ,abando.1@osu.edu,https://www.linkedin.com/in/miguel-antonio-abando-593533252/,
+Liquids Propulsion Lead,Thomas Yu,,Mechanical Engineering,yu.3559@osu..edu,https://www.linkedin.com/in/thomas-yu-0b8b5a28a/,
+Liquids Fluids Lead,Zafar Shaik,Junior ,Aerospace Engineering ,shaik.27@osu.edu,https://www.linkedin.com/in/zafarshaik/,
+Liquids DAQ/GSE Lead,Julian Hooks,,Engineering Physics,hooks.82@osu.edu,https://www.linkedin.com/in/julian-hooks-56912b291/,
+Liquids Test Director,Ray Saracene,,Mechanical Engineering,saracene.1@osu.edu,,

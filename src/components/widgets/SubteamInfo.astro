@@ -1,6 +1,6 @@
 ---
 import Socials from "./Socials.astro";
-import Image from "../common/Image.astro";
+import { Image} from "astro:assets";
 import { type TeamMember } from "~/types";
 import { type ImageProps } from "~/utils/images-optimization";
 import getStaffRecord from "~/staffData";
@@ -8,7 +8,7 @@ import getStaffRecord from "~/staffData";
 export interface Props {
   title: string;
   leads: string[];
-  images: Array<ImageProps>;
+  images: Array<{src: Promise<any>, alt: string}>;
 }
 
 const { title, leads = [], images = [] } = Astro.props;
@@ -42,7 +42,7 @@ const { title, leads = [], images = [] } = Astro.props;
   <div class="flex flex-col gap-4 md:w-1/2">
     {
       images.map((i) => (
-        <Image class="m-auto" widths={[400, 800]} layout="contained" {...i} />
+        <Image class="m-auto" widths={[400, 800]} {...i} />
       ))
     }
   </div>

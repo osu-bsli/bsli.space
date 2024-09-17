@@ -11,21 +11,23 @@ export interface Props {
   instagram?: string;
   classes?: string[] | string;
   useButtonStyle?: boolean;
+  vertical?: boolean;
 }
 
-const { linkedin, email, facebook, youtube, instagram, classes, useButtonStyle } = Astro.props;
+const { linkedin, email, facebook, youtube, instagram, classes, useButtonStyle, vertical } = Astro.props;
 ---
 
 <div
   class={twMerge(
     "font-normal flex flex-row flex-wrap gap-x-3 mt-2 text-muted",
-    useButtonStyle ? "gap-y-3" : "",
+    useButtonStyle && "gap-y-3",
     classes,
+    vertical && "flex-col"
   )}
 >
   {
-    instagram &&
-      <SocialLink icon="tabler:brand-instagram" href={instagram} label="Instagram" useButtonStyle={useButtonStyle} />
+    email &&
+      <SocialLink icon="tabler:mail" href={"mailto: " + email} label={email} useButtonStyle={useButtonStyle} />
   }
 
   {
@@ -34,8 +36,8 @@ const { linkedin, email, facebook, youtube, instagram, classes, useButtonStyle }
   }
 
   {
-    email &&
-      <SocialLink icon="tabler:mail" href={"mailto: " + email} label={email} useButtonStyle={useButtonStyle} />
+    instagram &&
+      <SocialLink icon="tabler:brand-instagram" href={instagram} label="Instagram" useButtonStyle={useButtonStyle} />
   }
 
   {
