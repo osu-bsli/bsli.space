@@ -23,6 +23,10 @@ function getImagePath(name) {
     let imagePath;
     for (let i in images) {
         if (i.startsWith(basePath + name)) {
+            if (imagePath != null) {
+                throw new Error("Multiple staff images found for " + name);
+            }
+
             imagePath = i;
         }
     }
