@@ -109,3 +109,14 @@ export const leadershipPageLayout: LeadershipPageLayout = [
         ]
     }
 ];
+
+export const flightSoftwareResponsibleEngineers = [
+    { name: "Pranav Moola", title: "Electronics" },
+    { name: "Cyrus Kim", title: "Electronics" },
+    { name: "Brian Jia", title: "Flight Software" },
+    { name: "Toby Simpson", title: "Guidance, Navigation, and Control (GNC) Software / Test Infrastructure" },
+    { name: "Elhan Majed", title: "Ground Control Software (Front End)" },
+    { name: "Lauren Clar", title: "Radio and Telemetry" },
+    { name: "Carter Davis", title: "Mechanical Structure" },
+    { name: "Reilly Fastring", title: "Air Brakes Mechatronics" },
+];

@@ -1,6 +1,6 @@
 ---
 import Socials from "./Socials.astro";
-import { Image} from "astro:assets";
+import { Image } from "astro:assets";
 import { type TeamMember } from "~/types";
 import { type ImageProps } from "~/utils/images-optimization";
 import getStaffRecord from "~/staffData";
@@ -8,42 +8,48 @@ import getStaffRecord from "~/staffData";
 export interface Props {
   title: string;
   leads: string[];
-  images: Array<{src: Promise<any>, alt: string}>;
+  images: Array<{ src: Promise<any>; alt: string }>;
+  content?: string;
 }
 
-const { title, leads = [], images = [] } = Astro.props;
+const {
+  title,
+  leads = [],
+  images = [],
+  content = await Astro.slots.render("content"),
+} = Astro.props;
 ---
 
-<div class="flex flex-col md:flex-row justify-center gap-8">
-  <div class="md:w-1/2">
-    <h2 class="text-primary text-4xl font-bold font-heading py-4">{title}</h2>
+<div>
+  <div class="flex flex-col md:flex-row justify-center gap-8">
+    <div class="md:w-1/2">
+      <h2 class="text-primary text-4xl font-bold font-heading py-4">{title}</h2>
 
-    <div class="items-end my-4">
-      <h3 class="text-xl font-bold">
-        {leads.length > 1 ? "Team Leads: " : "Team Lead: "}
-        <span class="text-primary">
-          {
-            leads.map((name) => (
-              <div>
-                {name}
-                <Socials {...getStaffRecord(name)} />
-              </div>
-            ))
-          }
-        </span>
-      </h3>
+      <div class="items-end my-4">
+        <h3 class="text-xl font-bold">
+          {leads.length > 1 ? "Team Leads: " : "Team Lead: "}
+          <span class="text-primary">
+            {
+              leads.map((name) => (
+                <div>
+                  {name}
+                  <Socials {...getStaffRecord(name)} />
+                </div>
+              ))
+            }
+          </span>
+        </h3>
+      </div>
+
+      <div class="flex flex-col gap-4 text-lg">
+        <slot />
+      </div>
     </div>
 
-    <div class="flex flex-col gap-4 text-lg">
-      <slot />
+    <div class="flex flex-col gap-4 md:w-1/2">
+      {images.map((i) => <Image class="m-auto" widths={[400, 800]} {...i} />)}
     </div>
   </div>
 
-  <div class="flex flex-col gap-4 md:w-1/2">
-    {
-      images.map((i) => (
-        <Image class="m-auto" widths={[400, 800]} {...i} />
-      ))
-    }
-  </div>
+  <div set:html={content} />
 </div>

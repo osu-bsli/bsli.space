@@ -8,6 +8,8 @@ import MeetTheTeams from "~/components/widgets/MeetTheTeams.astro";
 import TeamOverview from "~/components/widgets/TeamOverview.astro";
 import TeamOverviewLeader from "~/components/widgets/TeamOverviewLeader.astro";
 import SubteamInfo from "~/components/widgets/SubteamInfo.astro";
+import StaffCard from "~/components/widgets/StaffCard.astro";
+import { flightSoftwareResponsibleEngineers } from "~/staffData";
 
 const metadata = {
   title: "BSLI — The Ohio State University",
@@ -158,6 +160,22 @@ const metadata = {
       teams to collect proper data for a successful flight. Additionally, they
       work closely with Recovery and Payload to assist and ensure the proper
       systems and data collection systems work for their needs.
+
+      <Fragment slot="content">
+        <h2
+          class="text-primary text-3xl font-bold font-heading py-8 text-center"
+        >
+          Responsible Engineers
+        </h2>
+
+        <div class="flex flex-wrap items-stretch justify-center gap-4">
+          {
+            flightSoftwareResponsibleEngineers.map(({ name, title }) =>
+              <StaffCard forceAspectRatio name={name} title={title} />
+            )
+          }
+        </div>
+      </Fragment>
     </SubteamInfo>
 
     <SubteamInfo
