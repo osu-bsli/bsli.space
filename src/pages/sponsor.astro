@@ -6,6 +6,7 @@ import Layout from "~/layouts/PageLayout.astro";
 import StaffCard from "~/components/widgets/StaffCard.astro";
 import Headline from "~/components/ui/Headline.astro";
 import WidgetWrapper from "~/components/ui/WidgetWrapper.astro";
+import Socials from "~/components/widgets/Socials.astro";
 
 const title = "Sponsor us";
 ---
@@ -54,13 +55,12 @@ const title = "Sponsor us";
             <p>
               Hi, I'm Hana Winchester! I'm the <b>Sponsorship Chair</b> for the Buckeye
               Space Launch Initiative. If you want to sponsor us or just want to
-              learn more, email me or Marc, our <b
-                >Business Operations Director</b
-              >.
+              learn more, you can reach me and our leadership team at the email below.
             </p>
 
-            <Staff title="Sponsorship Chair:" name="Hana Winchester" />
-            <Staff title="Business Operations Director:" name="Marc Chow" />
+            <div class="flex justify-center">
+              <Socials useButtonStyle classes="text-primary" email="eng-buckeyesli@osu.edu" />
+            </div>
           </div>
         </div>
         <div class="mt-10 md:mt-0 md:min-w-96">
