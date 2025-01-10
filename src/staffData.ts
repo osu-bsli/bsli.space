@@ -43,7 +43,7 @@ export const leadershipPageLayout: LeadershipPageLayout = [
             "Lauren Clar",
             "Elhan Majed",
             "Alex Echanove",
-            "Vacant Communications Director",
+            "Anastasia Anikina",
             "Youssef Erraki",
             "Marc Chow",
         ]
@@ -54,11 +54,11 @@ export const leadershipPageLayout: LeadershipPageLayout = [
         sectionShort: "Admin Team",
         sectionId: "admin-team",
         staff: [
-            "Waleed Chaudhary",
+            "Waleed Jamshaid",
             "Junchen Wu",
             "Hana Winchester",
             "Grayson Ullman",
-            "Anastasia Anikina",
+            "Vacant Social Media Chair",
             "Brian Jia",
         ]
     },
