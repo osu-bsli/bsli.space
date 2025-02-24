@@ -80,9 +80,9 @@ export const leadershipPageLayout: LeadershipPageLayout = [
     },
 
     {
-        section: "Spaceport America Cup Team",
-        sectionShort: "Spaceport",
-        sectionId: "spaceport",
+        section: "International Rocket Engineering Competition Team",
+        sectionShort: "IREC",
+        sectionId: "irec",
         staff: [
             "Cameron Burford",
             "Rahul Srinivas",

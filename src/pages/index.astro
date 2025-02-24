@@ -11,7 +11,7 @@ import { getHomePermalink, getPermalink } from "~/utils/permalinks";
 
 const metadata = {
   title: "BSLI — The Ohio State University",
-  ignoreTitleTemplate: true,
+  ignoreTitleTemplate: true
 };
 ---
 
@@ -23,14 +23,14 @@ const metadata = {
       {
         variant: "primary",
         text: "Get involved 🚀",
-        href: getHomePermalink() + "#get-involved",
+        href: getHomePermalink() + "#get-involved"
       },
       { text: "Learn more", href: "#we-are-bsli" },
-      { text: "Sponsor us!", href: getPermalink("/sponsor") },
+      { text: "Sponsor us!", href: getPermalink("/sponsor") }
     ]}
     image={{
       src: "~/assets/images/BSLI-Added-payload-both-teams.png",
-      alt: "Payload & Spaceport Teams",
+      alt: "Payload & IREC Teams"
     }}
   >
     <Fragment slot="title">Buckeye Space Launch Initiative</Fragment>
@@ -48,12 +48,13 @@ const metadata = {
     title="WE ARE BSLI."
     image={{
       src: "~/assets/images/scottlab2.jpg",
-      alt: "Scott Lab at OSU",
+      alt: "Scott Lab at OSU"
     }}
   >
     <Fragment slot="content">
-      We are an interdisciplinary organization of ambitious students who own a shared vision of student-led spaceflight. Among our three
-      project teams, we launch a wide array of payloads to low and high altitudes.
+      We are an interdisciplinary organization of ambitious students who own a
+      shared vision of student-led spaceflight. Among our three project teams,
+      we launch a wide array of payloads to low and high altitudes.
     </Fragment>
 
     <Fragment slot="bg">
@@ -71,39 +72,39 @@ const metadata = {
           "NASA SLI is a research-based, competitive, experiential exploration project striving to provide relevant research through payload components to support the development of NASA’s Space Launch System (SLS) program.",
         image: {
           src: import("~/assets/images/subteam-nasa.webp"),
-          alt: "NASA Subteam",
+          alt: "NASA Subteam"
         },
         href: getPermalink("/projects/nasa"),
         meetingTimes: [
           {
             day: "Tuesdays",
-            time: "6-8 pm",
+            time: "6-8 pm"
           },
           {
             day: "Sundays",
-            time: "3-5 pm",
-          },
-        ],
+            time: "3-5 pm"
+          }
+        ]
       },
       {
-        name: "Spaceport America Cup (SAC)",
+        name: "International Rocket Engineering Competition (IREC)",
         description:
-          "SAC competes at Spaceport America Cup, an international collegiate rocketry competition hosted in New Mexico every summer. BSLI competes in the 30k Student Research and Developed (SRAD) category.",
+          "This team competes at the International Rocket Engineering Competition, hosted annually in Texas. BSLI competes in the 30k Student Research and Developed (SRAD) category.",
         image: {
-          src: import("~/assets/images/subteam-sac.webp"),
-          alt: "Spaceport America Cup Team",
+          src: import("~/assets/images/subteam-irec.webp"),
+          alt: "IREC Team"
         },
-        href: getPermalink("/projects/sac"),
+        href: getPermalink("/projects/irec"),
         meetingTimes: [
           {
             day: "Wednesdays",
-            time: "7-9 pm",
+            time: "7-9 pm"
           },
           {
             day: "Sundays",
-            time: "1-3 pm",
-          },
-        ],
+            time: "1-3 pm"
+          }
+        ]
       },
       {
         name: "Liquid Engine Project (Liquids)",
@@ -111,20 +112,20 @@ const metadata = {
           "BSLI Liquids team focuses on liquid bipropellant rocket engine development. Current development includes working towards test firing an LR-101, and further refining our 1st custom engine.",
         image: {
           src: import("~/assets/images/subteam-liquids.webp"),
-          alt: "Liquids Team",
+          alt: "Liquids Team"
         },
         href: getPermalink("/projects/liquids"),
         meetingTimes: [
           {
             day: "Thursdays",
-            time: "6 pm",
+            time: "6 pm"
           },
           {
             day: "Sundays",
-            time: "4 pm",
-          },
-        ],
-      },
+            time: "4 pm"
+          }
+        ]
+      }
     ]}
   >
     <Fragment slot="subtitle">
@@ -150,36 +151,36 @@ const metadata = {
         title:
           'Step 1: <span class="font-medium"><a href="#our-projects" class="link">Find your Project Subteam.</a></span>',
         description:
-          "Research our teams! Across NASA, Spaceport, and Liquids, there is a place for you in BSLI.",
-        icon: "tabler:search",
+          "Look into our teams! Across NASA, IREC, and Liquids, there is a place for you in BSLI.",
+        icon: "tabler:search"
       },
       {
         title:
           'Step 2: <span class="font-medium">Check if the team meets when you\'re available.</span>',
         description: `Meeting times can be found in the <a href="#our-projects" class="link">"Our Projects"</a> section above.`,
-        icon: "tabler:clock",
+        icon: "tabler:clock"
       },
       {
         title: 'Step 3: <span class="font-medium">Join our Slack.</span>',
         description: `You can find the link <a href="#call-to-action" class="link">at the bottom of this page.</a>`,
-        icon: "tabler:message-chatbot",
+        icon: "tabler:message-chatbot"
       },
       {
         title: 'Step 4: <span class="font-medium">Talk to Us!</span>',
         description:
           "Show up to a meeting. Talk to some people in each project team and check out the vibe.",
-        icon: "tabler:friends",
+        icon: "tabler:friends"
       },
       {
         title:
           'Step 5: <span class="font-medium">Consider joining a leadership position!</span>',
         description: `If you enjoy being part of BSLI, check out the variety of leadership positions available on the <a class="link" href="${getPermalink("leadership")}">Leadership</a> page.`,
-        icon: "tabler:bulb",
-      },
+        icon: "tabler:bulb"
+      }
     ]}
     image={{
       src: "~/assets/images/DSC4344.webp",
-      alt: "Steps image",
+      alt: "Steps image"
     }}
   >
     <Fragment slot="bg">
@@ -197,8 +198,8 @@ const metadata = {
         text: "Join our Slack",
         href: "https://linktr.ee/buckeye_sli",
         target: "_blank",
-        icon: "tabler:rocket",
-      },
+        icon: "tabler:rocket"
+      }
     ]}
   >
     <Fragment slot="title">Ready to build some rockets?</Fragment>

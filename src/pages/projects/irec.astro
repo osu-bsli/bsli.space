@@ -13,24 +13,27 @@ import { flightSoftwareResponsibleEngineers } from "~/staffData";
 
 const metadata = {
   title: "BSLI — The Ohio State University",
-  ignoreTitleTemplate: true,
+  ignoreTitleTemplate: true
 };
 ---
 
 <Layout metadata={metadata}>
   <ProjectHero
     image={{
-      src: "~/assets/images/projects/sac/hero.jpeg",
-      alt: "Spaceport America Cup Team",
+      src: "~/assets/images/projects/irec/hero.jpeg",
+      alt: "IREC Team"
     }}
-    tagline={"23′-24′ Spaceport America Cup Team"}
+    tagline={"23′-24′ IREC Team"}
   >
-    <Fragment slot="title">Spaceport America Cup Project</Fragment>
+    <Fragment slot="title"
+      >International Rocket Engineering Competition Project</Fragment
+    >
 
     <Fragment slot="subtitle">
-      We participate in the <b>Spaceport America Cup</b>, the world’s largest
-      Intercollegiate Rocket Engineering Competition, where students can launch
-      solid, liquid, or hybrid rockets to 10k or 30k feet.
+      We participate in the <b>International Rocket Engineering Competition</b>,
+      the world's largest university rocket engineering conference and
+      competition, where students can launch solid, liquid, or hybrid rockets
+      to 10k or 30k feet.
     </Fragment>
   </ProjectHero>
 
@@ -38,21 +41,21 @@ const metadata = {
     columns={3}
     items={[
       {
-        title: "Spaceport America Cup",
+        title: "International Rocket Engineering Competition",
         description:
-          "The Spaceport America Cup is the largest Intercollegiate Rocket Engineering Competition. Students can launch solid, liquid, or hybrid rockets up to 10k or 30k feet.",
+          "The International Rocket Engineering Competition (IREC) is the world's largest university rocket engineering competition. Students can launch solid, liquid, or hybrid rockets up to 45,000 feet.",
         image: {
-          src: "~/assets/images/projects/sac/sac-logo.webp",
-          alt: "Spaceport America Cup Logo",
-        },
+          src: "~/assets/images/projects/irec/sac-logo.webp",
+          alt: "IREC Logo"
+        }
       },
       {
-        title: "Spaceport America | The Space to be…™",
+        title: "Spaceport Midland",
         description:
-          "Spaceport America Cup is held at Spaceport America, the world’s first purpose-built commercial spaceport in Las Cruces, NM.",
+          "The IREC is held at Spaceport Midland in Midland, Texas, a launch facility that provides expanded launch opportunities for collegidate rocketry clubs.",
         image: {
-          src: "~/assets/images/projects/sac/spaceport-america.webp",
-          alt: "Spaceport America",
+          src: "~/assets/images/projects/irec/Downtown_Midland_aerial_view.jpg",
+          alt: "Spaceport Midland",
         },
       },
       {
@@ -60,28 +63,27 @@ const metadata = {
         description:
           "ESRA is a non-profit organization founded to foster and promote engineering knowledge in rocketry.",
         image: {
-          src: "~/assets/images/projects/sac/esra-logo.webp",
-          alt: "Experimental Sounding Rocket Association Logo",
-        },
-      },
+          src: "~/assets/images/projects/irec/esra-logo.webp",
+          alt: "Experimental Sounding Rocket Association Logo"
+        }
+      }
     ]}
   />
 
   <ProjectBlurb
-    title="BSLI SAC Project team competes annually at Spaceport America"
+    title="BSLI IREC Project team competes annually in Texas"
     image={{
-      src: "~/assets/images/projects/sac/team-at-spaceport-america.webp",
-      alt: "Spaceport America Cup Project Team",
+      src: "~/assets/images/projects/irec/team-at-spaceport-america.webp",
+      alt: "IREC Project Team"
     }}
   >
     <Fragment slot="content">
-      BSLI Spaceport America Cup (SAC) project team is focused on designing,
-      manufacturing, and launching a student-built rocket. Every year, the team
-      travels to New Mexico to compete in the Spaceport America Cup, the largest
-      intercollegiate rocketry competition. The team competes in the 30k,
-      Student Research and Designed (SRAD) category, meaning they design all
-      components of a rocket to reach or get as close to 30,000 feet as
-      possible.
+      The BSLI IREC project team is focused on designing, manufacturing, and
+      launching a high-powered rocket. Every year, the team travels to Texas to
+      compete in the International Rocket Engineering Competition, the largest
+      intercollegiate rocketry competition. The team competes in the 30K Student
+      Research and Designed (SRAD) category, meaning they must design and build
+      a rocket that can reach an altitude of 30,000 feet.
     </Fragment>
 
     <Fragment slot="bg">
@@ -98,15 +100,15 @@ const metadata = {
       "Aerodynamics",
       "Recovery",
       "Payload",
-      "Propulsion",
+      "Propulsion"
     ]}
   >
     <TeamOverview
       slot="Overview"
       title="ILIAD"
       image={{
-        src: import("~/assets/images/projects/sac/overview.webp"),
-        alt: "Iliad",
+        src: import("~/assets/images/projects/irec/overview.webp"),
+        alt: "Iliad"
       }}
       stats={[
         { name: "HEIGHT", values: ["3.38 m", "11.1 ft"] },
@@ -115,7 +117,7 @@ const metadata = {
         { name: "THRUST", values: ["4425 N", "995 lbf"] },
         { name: "MOTOR", values: ["O-CLASS"] },
         { name: "APOGEE", values: ["8.9 km", "29.2k ft"] },
-        { name: "TOP SPEED", values: ["Mach 2.05"] },
+        { name: "TOP SPEED", values: ["Mach 2.05"] }
       ]}
     >
       <TeamOverviewLeader
@@ -130,9 +132,9 @@ const metadata = {
       title="Structures"
       images={[
         {
-          src: import("~/assets/images/projects/sac/structures.webp"),
-          alt: "Structures Team",
-        },
+          src: import("~/assets/images/projects/irec/structures.webp"),
+          alt: "Structures Team"
+        }
       ]}
       leads={["Liam Juhas"]}
     >
@@ -148,9 +150,9 @@ const metadata = {
       title="Avionics"
       images={[
         {
-          src: import("~/assets/images/projects/sac/avionics.webp"),
-          alt: "Avionics Bay",
-        },
+          src: import("~/assets/images/projects/irec/avionics.webp"),
+          alt: "Avionics Bay"
+        }
       ]}
       leads={["Toby Simpson"]}
     >
@@ -170,9 +172,9 @@ const metadata = {
 
         <div class="flex flex-wrap items-stretch justify-center gap-4">
           {
-            flightSoftwareResponsibleEngineers.map(({ name, title }) =>
+            flightSoftwareResponsibleEngineers.map(({ name, title }) => (
               <StaffCard forceAspectRatio name={name} title={title} />
-            )
+            ))
           }
         </div>
       </Fragment>
@@ -183,9 +185,9 @@ const metadata = {
       title="Aerodynamics"
       images={[
         {
-          src: import("~/assets/images/projects/sac/aerodynamics.webp"),
-          alt: "CFD Simulation",
-        },
+          src: import("~/assets/images/projects/irec/aerodynamics.webp"),
+          alt: "CFD Simulation"
+        }
       ]}
       leads={["Jackson Nicley"]}
     >
@@ -201,13 +203,13 @@ const metadata = {
       title="Recovery"
       images={[
         {
-          src: import("~/assets/images/projects/sac/recovery1.webp"),
-          alt: "Testing of parachute cord",
+          src: import("~/assets/images/projects/irec/recovery1.webp"),
+          alt: "Testing of parachute cord"
         },
         {
-          src: import("~/assets/images/projects/sac/recovery2.webp"),
-          alt: "Deployed parachute after landing",
-        },
+          src: import("~/assets/images/projects/irec/recovery2.webp"),
+          alt: "Deployed parachute after landing"
+        }
       ]}
       leads={["Calvin Beall"]}
     >
@@ -224,9 +226,9 @@ const metadata = {
       title="Payload"
       images={[
         {
-          src: import("~/assets/images/projects/sac/payload.webp"),
-          alt: "Payload",
-        },
+          src: import("~/assets/images/projects/irec/payload.webp"),
+          alt: "Payload"
+        }
       ]}
       leads={["Hanshu Kotta"]}
     >
@@ -242,9 +244,9 @@ const metadata = {
       title="Propulsion"
       images={[
         {
-          src: import("~/assets/images/projects/sac/propulsion.webp"),
-          alt: "Static fire of student-developed rocket motor",
-        },
+          src: import("~/assets/images/projects/irec/propulsion.webp"),
+          alt: "Static fire of student-developed rocket motor"
+        }
       ]}
       leads={["Matthew Geiger"]}
     >
