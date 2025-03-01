@@ -94,3 +94,25 @@
 .dd *:first-child {
   margin-top: 0;
 }
+
+#cc-main {
+  /** Change font **/
+  --cc-font-family: sans-serif;
+
+  /** Change button primary color to black **/
+  --cc-btn-primary-bg: var(--aw-color-primary);
+  --cc-btn-primary-border-color: #000000;
+  --cc-btn-primary-hover-bg: #444444;
+  --cc-btn-primary-hover-border-color: #444444;
+
+  --cc-btn-secondary-bg: rgba(0,0,0,0);
+  --cc-btn-secondary-border-color: #000000;
+  --cc-btn-secondary-hover-bg: #444444;
+  --cc-btn-secondary-hover-border-color: #444444;
+
+  /** Also make toggles the same color as the button **/
+  --cc-toggle-on-bg: var(--cc-btn-primary-bg);
+
+  /** Make the buttons a bit rounder **/
+  --cc-btn-border-radius: 10px;
+}
