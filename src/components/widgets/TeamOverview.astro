@@ -9,21 +9,24 @@ interface Stat {
 
 export interface Props {
   title: string;
+  subtitle: string;
   stats: Stat[];
   image: {src: Promise<any>, alt: string};
 }
 
-const { title, stats = [], image } = Astro.props;
+const { title, subtitle, stats = [], image } = Astro.props;
 ---
 
 <div class="flex flex-col justify-center md:flex-row md:gap-8">
   <div class="flex flex-col md:w-1/2">
     <h2
       id={"tab-content-" + title}
-      class="text-primary font-heading font-bold text-6xl my-8"
+      class="text-primary font-heading font-bold text-6xl mt-8"
     >
       {title}
     </h2>
+
+    <p class="mb-8 font-bold text-muted">{subtitle}</p>
 
     <table>
       {
