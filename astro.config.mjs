@@ -19,29 +19,12 @@ import {
 } from './src/utils/frontmatter.mjs';
 import dsv from '@rollup/plugin-dsv';
 
-import cookieconsent from "@jop-software/astro-cookieconsent";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const hasExternalScripts = false;
 const whenExternalScripts = (items = []) =>
   hasExternalScripts ? (Array.isArray(items) ? items.map((item) => item()) : [items()]) : [];
-
-import {
-  SERVICE_AD_STORAGE,
-  SERVICE_AD_USER_DATA,
-  SERVICE_AD_PERSONALIZATION,
-  SERVICE_ANALYTICS_STORAGE,
-  SERVICE_FUNCTIONALITY_STORAGE,
-  SERVICE_PERSONALIZATION_STORAGE,
-  SERVICE_SECURITY_STORAGE,
-  CAT_ADVERTISEMENT,
-  CAT_ANALYTICS,
-  CAT_FUNCTIONALITY,
-  CAT_SECURITY,
-  CAT_NECESSARY,
-  updateGtagConsent,
-} from "./src/googleAnalytics";
 
 export default defineConfig({
   output: 'static',
