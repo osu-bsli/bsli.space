@@ -25,7 +25,6 @@ const metadata = {
         text: "Get involved 🚀",
         href: getHomePermalink() + "#get-involved"
       },
-      { text: "Learn more", href: "#we-are-bsli" },
       { text: "Sponsor us!", href: getPermalink("/sponsor") }
     ]}
     image={{
@@ -40,27 +39,6 @@ const metadata = {
       <span class="font-semibold text-primary">The Ohio State University</span>
     </Fragment>
   </Hero>
-
-  <WeAreBsli
-    id="we-are-bsli"
-    isReversed
-    tagline="WHO WE ARE"
-    title="WE ARE BSLI."
-    image={{
-      src: "~/assets/images/scottlab2.jpg",
-      alt: "Scott Lab at OSU"
-    }}
-  >
-    <Fragment slot="content">
-      We are an interdisciplinary organization of ambitious students who own a
-      shared vision of student-led spaceflight. Among our three project teams,
-      we launch a wide array of payloads to low and high altitudes.
-    </Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-gray-50 dark:bg-transparent"></div>
-    </Fragment>
-  </WeAreBsli>
 
   <OurProjects
     id="our-projects"
