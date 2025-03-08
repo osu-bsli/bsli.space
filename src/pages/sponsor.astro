@@ -7,38 +7,24 @@ import StaffCard from "~/components/widgets/StaffCard.astro";
 import Headline from "~/components/ui/Headline.astro";
 import WidgetWrapper from "~/components/ui/WidgetWrapper.astro";
 import Socials from "~/components/widgets/Socials.astro";
+import Sponsors from "~/components/widgets/Sponsors.astro";
+import Button from "~/components/ui/Button.astro";
 
 const title = "Sponsor us";
 ---
 
 <Layout metadata={{ title }}>
-  <Hero
-    actions={[
-      {
-        variant: "primary",
-        text: "Primary / Individual",
-        href: "https://www.giveto.osu.edu/makeagift/details/314735?fund=314735",
-      },
-      {
-        variant: "primary",
-        text: "Corporate",
-        href: "#corporate",
-      },
-    ]}
-  >
-    <Fragment slot="title"> Want to sponsor us? </Fragment>
+  <Hero>
+    <Fragment slot="title">Thank you to our amazing sponsors!</Fragment>
 
     <Fragment slot="subtitle">
-      Without donations by generous contributors like you, private or corporate,
-      we could not do our work. Any contribution brings us one step closer to
-      reaching the Karman line, and will let us make the experience for our
-      members even better.
+      <Sponsors/>
     </Fragment>
   </Hero>
 
   <WidgetWrapper id="corporate" containerClass={"max-w-7xl mx-auto"}>
     <Headline
-      title="Let's get in touch!"
+      title="Want to sponsor us?"
       tagline="Corporate sponsorships"
       classes={{
         container: "max-w-xl sm:mx-auto lg:max-w-2xl",
@@ -61,6 +47,10 @@ const title = "Sponsor us";
             <div class="flex justify-center">
               <Socials useButtonStyle classes="text-primary" email="eng-buckeyesli@osu.edu" />
             </div>
+
+            <p>If you want to donate to us individually, click on the link below!</p>
+
+            <Button variant="secondary" href="https://www.giveto.osu.edu/makeagift/details/314735?fund=314735">Primary / Individual Donations</Button>
           </div>
         </div>
         <div class="mt-10 md:mt-0 md:min-w-96">

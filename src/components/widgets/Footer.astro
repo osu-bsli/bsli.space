@@ -3,6 +3,7 @@ import { Icon } from "astro-icon/components";
 import Image from "../common/Image.astro";
 import { SITE } from "astrowind:config";
 import { getHomePermalink } from "~/utils/permalinks";
+import Sponsors from "./Sponsors.astro";
 
 interface Link {
   text?: string;
@@ -42,31 +43,7 @@ const {
 >
   <h2 class="mb-4 text-center text-4xl font-bold font-heading">Our Sponsors</h2>
 
-  <div class="flex flex-col gap-4 max-w-5xl m-auto">
-    <div
-      class="flex flex-row justify-center items-center flex-wrap gap-2 md:gap-4 [&>*]:w-40 [&>*]:md:w-64"
-    >
-      {
-        sponsors1.map(({ ariaLabel, src, href }) => (
-          <a href={href} class="bg-white p-4 rounded">
-            <Image layout="custom" src={src} alt={ariaLabel} />
-          </a>
-        ))
-      }
-    </div>
-
-    <div
-      class="flex flex-row justify-center flex-wrap gap-2 md:gap-4 [&>*]:w-40 [&>*]:md:w-64"
-    >
-      {
-        sponsors2.map(({ ariaLabel, src, href }) => (
-          <a href={href} class="bg-white p-4 rounded">
-            <Image layout="custom" src={src} alt={ariaLabel} />
-          </a>
-        ))
-      }
-    </div>
-  </div>
+  <Sponsors/>
 
   <div class="relative max-w-7xl mx-auto px-4 sm:px-6 dark:text-slate-300">
     <div

@@ -60,46 +60,47 @@ export const headerData: HeaderData = {
   actions: [{ variant: 'primary', text: 'JOIN 🚀', href: getHomePermalink() + '#get-involved' }],
 };
 
+export const sponsors1 = [
+  {
+    src: "~/assets/images/sponsors/SAS.webp",
+    ariaLabel: "SAS Logo",
+    href: "https://specialaerospaceservices.com/"
+  },
+  {
+    src: "~/assets/images/sponsors/redwire.webp",
+    ariaLabel: "Redwire Logo",
+    href: "https://redwirespace.com/"
+  },
+  {
+    src: "~/assets/images/sponsors/altium.webp",
+    ariaLabel: "Altium Logo",
+    href: "https://www.altium.com/"
+  },
+  {
+    src: "~/assets/images/sponsors/ansys.webp",
+    ariaLabel: "Ansys Logo",
+    href: "https://www.ansys.com/"
+  },
+  {
+    src: "~/assets/images/sponsors/OSGC.webp",
+    ariaLabel: "Ohio Space Grant Consortium Logo",
+    href: "https://osgc.org/"
+  }
+];
+export const sponsors2 = [
+  {
+    src: "~/assets/images/sponsors/OSUCOE.webp",
+    ariaLabel: "OSU College of Engineering Logo",
+    href: "https://engineering.osu.edu/"
+  },
+  {
+    src: "~/assets/images/sponsors/osu battelle center.webp",
+    ariaLabel: "OSU Battelle Center Logo",
+    href: "https://battellecenter.osu.edu/"
+  }
+];
+
 export const footerData = {
-  sponsors1: [
-    {
-      src: "~/assets/images/sponsors/SAS.webp",
-      ariaLabel: "SAS Logo",
-      href: "https://specialaerospaceservices.com/"
-    },
-    {
-      src: "~/assets/images/sponsors/redwire.webp",
-      ariaLabel: "Redwire Logo",
-      href: "https://redwirespace.com/"
-    },
-    {
-      src: "~/assets/images/sponsors/altium.webp",
-      ariaLabel: "Altium Logo",
-      href: "https://www.altium.com/"
-    },
-    {
-      src: "~/assets/images/sponsors/ansys.webp",
-      ariaLabel: "Ansys Logo",
-      href: "https://www.ansys.com/"
-    },
-    {
-      src: "~/assets/images/sponsors/OSGC.webp",
-      ariaLabel: "Ohio Space Grant Consortium Logo",
-      href: "https://osgc.org/"
-    }
-  ],
-  sponsors2: [
-    {
-      src: "~/assets/images/sponsors/OSUCOE.webp",
-      ariaLabel: "OSU College of Engineering Logo",
-      href: "https://engineering.osu.edu/"
-    },
-    {
-      src: "~/assets/images/sponsors/osu battelle center.webp",
-      ariaLabel: "OSU Battelle Center Logo",
-      href: "https://battellecenter.osu.edu/"
-    }
-  ],
   socialLinks: [
     { ariaLabel: 'LinkedIn', icon: 'tabler:brand-linkedin', href: 'https://www.linkedin.com/company/the-buckeye-space-launch-initiative' },
     { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: 'https://www.facebook.com/spacelaunchinitiative/' },
