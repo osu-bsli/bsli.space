@@ -85,7 +85,17 @@ export const sponsors1 = [
     src: "~/assets/images/sponsors/OSGC.webp",
     ariaLabel: "Ohio Space Grant Consortium Logo",
     href: "https://osgc.org/"
-  }
+  },
+  {
+    src: "~/assets/images/sponsors/LabJack.png",
+    ariaLabel: "LabJack Logo",
+    href: "https://labjack.com/"
+  },
+  {
+    src: "~/assets/images/sponsors/PCB Piezotronics.jpg",
+    ariaLabel: "PCB Piezotronics Logo",
+    href: "https://www.pcb.com/"
+  },
 ];
 export const sponsors2 = [
   {
@@ -97,7 +107,7 @@ export const sponsors2 = [
     src: "~/assets/images/sponsors/osu battelle center.webp",
     ariaLabel: "OSU Battelle Center Logo",
     href: "https://battellecenter.osu.edu/"
-  }
+  },
 ];
 
 export const footerData = {
