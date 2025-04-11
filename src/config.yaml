@@ -9,9 +9,9 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: BSLI
+    default: Buckeye Space Launch Initiative
     template: '%s — BSLI'
-  description: "The leading student rocketry organization at The Ohio State University."
+  description: "The leading high-power rocketry organization at The Ohio State University."
   robots:
     index: true
     follow: true
